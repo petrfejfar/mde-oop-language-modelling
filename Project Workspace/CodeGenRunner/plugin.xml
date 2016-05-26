@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <command
+               commandId="CodeGenRunner.command1"
+               label="Generate Code"
+               style="push">               
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="codegenrunner.popup.handlers.CodeGeneratorHandler"
+            commandId="CodeGenRunner.command1">
+      </handler>
+   </extension>
+   <extension
+         name="GenerateCodeCommands"
+         point="org.eclipse.ui.commands">
+      <command
+            id="CodeGenRunner.command1"
+            name="CodeGenerator">
+      </command>
+   </extension>
+
+
+</plugin>

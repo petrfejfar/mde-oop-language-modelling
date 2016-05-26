@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/behaviouralProgramMM/src" modelPluginID="behaviouralProgramMM"
+    modelName="BehaviouralProgramMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>behaviouralProgramMM.ecore</foreignModel>
+  <genPackages prefix="BehaviouralProgramMM" disposableProviderFactory="true" ecorePackage="behaviouralProgramMM.ecore#/">
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//Behaviour">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//Behaviour/functions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//Behaviour/startfunction"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviouralProgramMM.ecore#//Function/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//Function/functionBody"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//Statement"/>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//Assignment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviouralProgramMM.ecore#//Assignment/VariableName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//Assignment/assignexpression"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//ConditionalBranch">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//ConditionalBranch/Ifstatements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//ConditionalBranch/elsestatements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//ConditionalBranch/ifexpression"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//Loop">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//Loop/loopstatements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//Loop/loopexpression"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//FunctionCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviouralProgramMM.ecore#//FunctionCall/FuncName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//FunctionCall/arguments"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//Expression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviouralProgramMM.ecore#//Expression/ExpressionString"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//Instantiation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviouralProgramMM.ecore#//Instantiation/VarName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviouralProgramMM.ecore#//Instantiation/VarType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//Instantiation/InitiationExpression"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

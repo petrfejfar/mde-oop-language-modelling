@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/StructuralProgramMM/src" modelPluginID="StructuralProgramMM"
+    modelName="StructuralProgramMM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>structuralProgramMM.ecore</foreignModel>
+  <genPackages prefix="StructuralProgramMM" disposableProviderFactory="true" ecorePackage="structuralProgramMM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="structuralProgramMM.ecore#//DataTypes">
+      <genEnumLiterals ecoreEnumLiteral="structuralProgramMM.ecore#//DataTypes/INTEGER"/>
+      <genEnumLiterals ecoreEnumLiteral="structuralProgramMM.ecore#//DataTypes/STRING"/>
+      <genEnumLiterals ecoreEnumLiteral="structuralProgramMM.ecore#//DataTypes/FLOAT"/>
+      <genEnumLiterals ecoreEnumLiteral="structuralProgramMM.ecore#//DataTypes/BOOLEAN"/>
+      <genEnumLiterals ecoreEnumLiteral="structuralProgramMM.ecore#//DataTypes/DOUBLE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="structuralProgramMM.ecore#//AccessMod">
+      <genEnumLiterals ecoreEnumLiteral="structuralProgramMM.ecore#//AccessMod/PRIVATE"/>
+      <genEnumLiterals ecoreEnumLiteral="structuralProgramMM.ecore#//AccessMod/PUBLIC"/>
+    </genEnums>
+    <genClasses ecoreClass="structuralProgramMM.ecore#//Program">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference structuralProgramMM.ecore#//Program/classes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference structuralProgramMM.ecore#//Program/MainMethod"/>
+    </genClasses>
+    <genClasses ecoreClass="structuralProgramMM.ecore#//Class">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structuralProgramMM.ecore#//Class/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference structuralProgramMM.ecore#//Class/variables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference structuralProgramMM.ecore#//Class/methods"/>
+    </genClasses>
+    <genClasses ecoreClass="structuralProgramMM.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structuralProgramMM.ecore#//Variable/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structuralProgramMM.ecore#//Variable/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="structuralProgramMM.ecore#//Method">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structuralProgramMM.ecore#//Method/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structuralProgramMM.ecore#//Method/ReturnType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute structuralProgramMM.ecore#//Method/AccesSpecifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference structuralProgramMM.ecore#//Method/variables"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference structuralProgramMM.ecore#//Method/class"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<structuralProgramMM:Program xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:structuralProgramMM="http://www.example.org/structuralProgramMM" MainMethod="//@classes.0/@methods.0">
+  <classes Name="Program">
+    <variables Name="i"/>
+    <methods Name="Main" AccesSpecifier="public" class="//@classes.0"/>
+    <methods Name="Foo" class="//@classes.0">
+      <variables Name="n"/>
+    </methods>
+  </classes>
+</structuralProgramMM:Program>

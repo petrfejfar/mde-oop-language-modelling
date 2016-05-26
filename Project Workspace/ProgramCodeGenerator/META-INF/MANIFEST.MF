@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ProgramCodeGenerator
+Bundle-SymbolicName: ProgramCodeGenerator
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: programcodegenerator.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ StructuralProgramMM;bundle-version="0.1.0",
+ behaviouralProgramMM;bundle-version="0.1.0",
+ com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Export-Package: programcodegenerator.codeGen
+
