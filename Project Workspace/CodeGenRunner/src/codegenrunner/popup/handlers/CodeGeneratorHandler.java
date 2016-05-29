@@ -20,10 +20,15 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.wizard.WizardDialog;
+import org.eclipse.ui.IWorkbench;
+import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 import behaviouralProgramMM.Behaviour;
 import behaviouralProgramMM.BehaviouralProgramMMPackage;
+import codegenrunner.wizards.MyWizard;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -58,7 +63,12 @@ public class CodeGeneratorHandler extends AbstractHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		ISelection selection = HandlerUtil.getCurrentSelection(event);
+
+		IWorkbench wb = PlatformUI.getWorkbench(); 
+		IWorkbenchWindow win = wb.getActiveWorkbenchWindow(); 
+		WizardDialog wDia = new WizardDialog(win.getShell(), new MyWizard());
+		wDia.open();
+		/*ISelection selection = HandlerUtil.getCurrentSelection(event);
 		if (selection instanceof IStructuredSelection) {
 			Object[] elements = ((IStructuredSelection) selection).toArray();
 
@@ -108,11 +118,12 @@ public class CodeGeneratorHandler extends AbstractHandler {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
+		}*/
 		return null;
 	}
 
-	Behaviour LoadBehaviour(IFile file) {
+
+	static Behaviour LoadBehaviour(IFile file) {
 		/*
 		 * http://rtsys.informatik.uni-kiel.de/confluence/pages/viewpage.action?
 		 * pageId=10751683
@@ -146,7 +157,7 @@ public class CodeGeneratorHandler extends AbstractHandler {
 		return null;
 	}
 
-	Program LoadProgram(IFile file) {
+	static Program LoadProgram(IFile file) {
 		/*
 		 * http://rtsys.informatik.uni-kiel.de/confluence/pages/viewpage.action?
 		 * pageId=10751683
