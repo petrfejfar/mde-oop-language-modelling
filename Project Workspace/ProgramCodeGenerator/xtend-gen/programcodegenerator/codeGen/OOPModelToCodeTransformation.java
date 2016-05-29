@@ -417,9 +417,9 @@ public class OOPModelToCodeTransformation {
     {
       EList<Statement> _try = trycatch.getTry();
       for(final Statement s : _try) {
-        _builder.append("\t    ");
+        _builder.append("    ");
         String _genCode = this.genCode(s);
-        _builder.append(_genCode, "\t    ");
+        _builder.append(_genCode, "    ");
         _builder.newLineIfNotEmpty();
       }
     }

@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import behaviouralProgramMM.Behaviour;
 import behaviouralProgramMM.BehaviouralProgramMMPackage;
 import programcodegenerator.codeGen.OOPModelToCodeTransformation;
+import programcodegenerator.codeGen.OOPModelToCodeTransformationCPP;
 import structuralProgramMM.Program;
 import structuralProgramMM.StructuralProgramMMFactory;
 
@@ -47,7 +48,23 @@ public class StartCodeGenerator {
 			}
 			System.out.println(s);
 		}
-		return s;
+		
+		OOPModelToCodeTransformationCPP m2codeCPP = new OOPModelToCodeTransformationCPP();
+		String t = null;
+		if (behav != null && prog != null)
+			t = m2codeCPP.genCode(prog, behav);
+
+		if (t != null) {
+			java.nio.file.Path path = java.nio.file.Paths.get(OutputDir, prog.getMainMethod().getClass_().getName().concat(".cpp"));
+			try {
+				WriteToFile(t, path);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			System.out.println(t);
+		}
+		
+		return s + t;
 	}
 
 	static void WriteToFile(String text, java.nio.file.Path filePath) throws IOException

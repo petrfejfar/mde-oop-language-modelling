@@ -13,11 +13,8 @@ import behaviouralProgramMM.Assignment
 import behaviouralProgramMM.ConditionalBranch
 import behaviouralProgramMM.Loop
 import behaviouralProgramMM.Instantiation
-import behaviouralProgramMM.Return
-import behaviouralProgramMM.TryCatch
-import behaviouralProgramMM.RaiseException
 
-public class OOPModelToCodeTransformation {
+public class OOPModelToCodeTransformationCPP {
 	Behaviour behaviour
 	Program program
 	def String genCode(Program prog, Behaviour behav)
@@ -31,21 +28,98 @@ public class OOPModelToCodeTransformation {
 	«ENDFOR»
 	'''
 	}
+	
 	def String genCode(structuralProgramMM.Class c)
-	'''
-	class «c.name»
+	{	
+	var isMain = false;
+	for(Method m : c.methods)
 	{
-	    /* Generated class variables */
-	    «FOR v : c.variables»
-	    «v.genCode»;
-	    «ENDFOR»
-	    
-	    /* Generated class methods */
-	    «FOR m : c.methods»
-	    «m.genCode»	
-	    «ENDFOR»
+		if (m == program.mainMethod)
+		{
+			isMain = true;
+		}
 	}
-	'''
+	
+	var s = "";
+	if (!isMain)
+	{
+		s +=	
+		'''
+		class «c.name»
+		{
+		'''
+	
+		s += 
+		'''
+		private:
+		    /* Generated public class variables */
+		'''	
+	}
+
+	for(Variable v : c.variables)
+	{
+		if (v.accesSpecifier.toString == "public")
+		{
+			s += 
+			'''    «v.genCode»
+			'''
+		}
+	}
+	if (!isMain)
+	{
+		s += 
+		'''    /* Generated public class methods */
+		'''	
+	}
+	for(Method v : c.methods)
+	{
+		if (v.accesSpecifier.toString == "public")
+		{
+			s += '''    «v.genCode»
+			'''
+		}
+	}
+	
+	if (!isMain)
+	{
+		s += 
+		'''
+		private:
+		    /* Generated private class variables */
+		'''	
+	}
+	for(Variable v : c.variables)
+	{
+		if (v.accesSpecifier.toString == "private")
+		{
+			s += 
+			'''    «v.genCode»
+			'''
+		}
+	}
+	if (!isMain)
+	{
+		s += 
+		'''    /* Generated private class methods */
+		'''	
+	}
+	for(Method v : c.methods)
+	{
+		if (v.accesSpecifier.toString == "private")
+		{
+			s += 
+			'''    «v.genCode»
+			'''
+		}
+	}
+
+	if (!isMain)
+	{
+		s += "}"
+	}
+	
+	s
+	}
 	
 	def String genCode(Variable v)
 	'''«v.type.toString» «v.name»'''
@@ -55,9 +129,9 @@ public class OOPModelToCodeTransformation {
 		var s = 
 		'''
 		«IF m != program.mainMethod»
-		«m.accesSpecifier.toString» «m.returnType.toString» «m.name»(«m.variables.getArgListString»)
+		«m.returnType.toString» «m.name»(«m.variables.getArgListString»)
 		«ELSE»
-		public static void main(String[] args)
+		static void main(String[] args)
 		«ENDIF»'''
 		s += '''		
 		{
@@ -121,12 +195,6 @@ public class OOPModelToCodeTransformation {
 	«(stmt as Instantiation).genCode»;
 	«ELSEIF stmt instanceof ConditionalBranch»
 	«(stmt as ConditionalBranch).genCode»
-	«ELSEIF stmt instanceof Return»
-	«(stmt as Return).genCode»
-	«ELSEIF stmt instanceof TryCatch»
-	«(stmt as TryCatch).genCode»
-	«ELSEIF stmt instanceof RaiseException»
-	«(stmt as RaiseException).genCode»
 	«ENDIF»
 	'''
 	
@@ -161,27 +229,6 @@ public class OOPModelToCodeTransformation {
 	    «ENDFOR»
 	}
 	«ENDIF»
-	'''
-	def String genCode(Return ret)
-	'''
-	return «ret.expression.expressionString»;
-	'''
-	def String genCode(TryCatch trycatch)
-	'''
-	try {
-	    «FOR s : trycatch.^try»
-	    «s.genCode»
-	    «ENDFOR»
-	} catch(Throwable e)
-	{
-	    «FOR s : trycatch.^catch»
-	    «s.genCode»
-	    «ENDFOR»
-	}
-	'''
-	def String genCode(RaiseException raise)
-	'''
-	throw «raise.expression.expressionString»
 	'''
 	
 	def String genCode(Instantiation instantiation)
