@@ -8,6 +8,7 @@ import behaviouralProgramMM.RaiseException;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -21,22 +22,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link behaviouralProgramMM.impl.RaiseExceptionImpl#getException <em>Exception</em>}</li>
+ *   <li>{@link behaviouralProgramMM.impl.RaiseExceptionImpl#getExpression <em>Expression</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class RaiseExceptionImpl extends StatementImpl implements RaiseException {
 	/**
-	 * The cached value of the '{@link #getException() <em>Exception</em>}' reference.
+	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getException()
+	 * @see #getExpression()
 	 * @generated
 	 * @ordered
 	 */
-	protected Expression exception;
-
+	protected Expression expression;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,16 +61,23 @@ public class RaiseExceptionImpl extends StatementImpl implements RaiseException 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Expression getException() {
-		if (exception != null && exception.eIsProxy()) {
-			InternalEObject oldException = (InternalEObject)exception;
-			exception = (Expression)eResolveProxy(oldException);
-			if (exception != oldException) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BehaviouralProgramMMPackage.RAISE_EXCEPTION__EXCEPTION, oldException, exception));
-			}
+	public Expression getExpression() {
+		return expression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs) {
+		Expression oldExpression = expression;
+		expression = newExpression;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BehaviouralProgramMMPackage.RAISE_EXCEPTION__EXPRESSION, oldExpression, newExpression);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return exception;
+		return msgs;
 	}
 
 	/**
@@ -78,8 +85,18 @@ public class RaiseExceptionImpl extends StatementImpl implements RaiseException 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Expression basicGetException() {
-		return exception;
+	public void setExpression(Expression newExpression) {
+		if (newExpression != expression) {
+			NotificationChain msgs = null;
+			if (expression != null)
+				msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BehaviouralProgramMMPackage.RAISE_EXCEPTION__EXPRESSION, null, msgs);
+			if (newExpression != null)
+				msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BehaviouralProgramMMPackage.RAISE_EXCEPTION__EXPRESSION, null, msgs);
+			msgs = basicSetExpression(newExpression, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BehaviouralProgramMMPackage.RAISE_EXCEPTION__EXPRESSION, newExpression, newExpression));
 	}
 
 	/**
@@ -87,11 +104,13 @@ public class RaiseExceptionImpl extends StatementImpl implements RaiseException 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setException(Expression newException) {
-		Expression oldException = exception;
-		exception = newException;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BehaviouralProgramMMPackage.RAISE_EXCEPTION__EXCEPTION, oldException, exception));
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BehaviouralProgramMMPackage.RAISE_EXCEPTION__EXPRESSION:
+				return basicSetExpression(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -102,9 +121,8 @@ public class RaiseExceptionImpl extends StatementImpl implements RaiseException 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BehaviouralProgramMMPackage.RAISE_EXCEPTION__EXCEPTION:
-				if (resolve) return getException();
-				return basicGetException();
+			case BehaviouralProgramMMPackage.RAISE_EXCEPTION__EXPRESSION:
+				return getExpression();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,8 +135,8 @@ public class RaiseExceptionImpl extends StatementImpl implements RaiseException 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BehaviouralProgramMMPackage.RAISE_EXCEPTION__EXCEPTION:
-				setException((Expression)newValue);
+			case BehaviouralProgramMMPackage.RAISE_EXCEPTION__EXPRESSION:
+				setExpression((Expression)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -132,8 +150,8 @@ public class RaiseExceptionImpl extends StatementImpl implements RaiseException 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BehaviouralProgramMMPackage.RAISE_EXCEPTION__EXCEPTION:
-				setException((Expression)null);
+			case BehaviouralProgramMMPackage.RAISE_EXCEPTION__EXPRESSION:
+				setExpression((Expression)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -147,8 +165,8 @@ public class RaiseExceptionImpl extends StatementImpl implements RaiseException 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BehaviouralProgramMMPackage.RAISE_EXCEPTION__EXCEPTION:
-				return exception != null;
+			case BehaviouralProgramMMPackage.RAISE_EXCEPTION__EXPRESSION:
+				return expression != null;
 		}
 		return super.eIsSet(featureID);
 	}

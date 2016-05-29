@@ -13,6 +13,9 @@ import behaviouralProgramMM.Assignment
 import behaviouralProgramMM.ConditionalBranch
 import behaviouralProgramMM.Loop
 import behaviouralProgramMM.Instantiation
+import behaviouralProgramMM.Return
+import behaviouralProgramMM.TryCatch
+import behaviouralProgramMM.RaiseException
 
 public class OOPModelToCodeTransformation {
 	Behaviour behaviour
@@ -118,6 +121,12 @@ public class OOPModelToCodeTransformation {
 	«(stmt as Instantiation).genCode»;
 	«ELSEIF stmt instanceof ConditionalBranch»
 	«(stmt as ConditionalBranch).genCode»
+	«ELSEIF stmt instanceof Return»
+	«(stmt as Return).genCode»
+	«ELSEIF stmt instanceof TryCatch»
+	«(stmt as TryCatch).genCode»
+	«ELSEIF stmt instanceof RaiseException»
+	«(stmt as RaiseException).genCode»
 	«ENDIF»
 	'''
 	
@@ -152,6 +161,27 @@ public class OOPModelToCodeTransformation {
 	    «ENDFOR»
 	}
 	«ENDIF»
+	'''
+	def String genCode(Return ret)
+	'''
+	return «ret.expression.expressionString»;
+	'''
+	def String genCode(TryCatch trycatch)
+	'''
+	try {
+		    «FOR s : trycatch.^try»
+		    «s.genCode»
+		    «ENDFOR»
+	} catch(Throwable e)
+	{
+	    «FOR s : trycatch.^catch»
+	    «s.genCode»
+	    «ENDFOR»
+	}
+	'''
+	def String genCode(RaiseException raise)
+	'''
+	throw «raise.expression.expressionString»
 	'''
 	
 	def String genCode(Instantiation instantiation)

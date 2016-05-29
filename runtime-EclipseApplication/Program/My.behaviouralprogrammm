@@ -17,6 +17,20 @@
     <functionBody xsi:type="behaviouralProgramMM:FunctionCall" FuncName="Console.WriteLine">
       <arguments ExpressionString="&quot;Foo is done!&quot;"/>
     </functionBody>
+    <functionBody xsi:type="behaviouralProgramMM:TryCatch">
+      <catch xsi:type="behaviouralProgramMM:Assignment" VariableName="i">
+        <assignexpression ExpressionString="0"/>
+      </catch>
+      <catch xsi:type="behaviouralProgramMM:RaiseException">
+        <expression ExpressionString="new java.lang.Exception();"/>
+      </catch>
+      <try xsi:type="behaviouralProgramMM:Return">
+        <expression ExpressionString="i"/>
+      </try>
+    </functionBody>
+    <functionBody xsi:type="behaviouralProgramMM:Return">
+      <expression ExpressionString="i"/>
+    </functionBody>
   </functions>
   <functions Name="Runner.Main">
     <functionBody xsi:type="behaviouralProgramMM:Instantiation" VarName="i" VarType="int">

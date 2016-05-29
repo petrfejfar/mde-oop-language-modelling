@@ -8,7 +8,10 @@ import behaviouralProgramMM.Function;
 import behaviouralProgramMM.FunctionCall;
 import behaviouralProgramMM.Instantiation;
 import behaviouralProgramMM.Loop;
+import behaviouralProgramMM.RaiseException;
+import behaviouralProgramMM.Return;
 import behaviouralProgramMM.Statement;
+import behaviouralProgramMM.TryCatch;
 import com.google.common.base.Objects;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtend2.lib.StringConcatenation;
@@ -276,6 +279,24 @@ public class OOPModelToCodeTransformation {
                 String _genCode_4 = this.genCode(((ConditionalBranch) stmt));
                 _builder.append(_genCode_4, "");
                 _builder.newLineIfNotEmpty();
+              } else {
+                if ((stmt instanceof Return)) {
+                  String _genCode_5 = this.genCode(((Return) stmt));
+                  _builder.append(_genCode_5, "");
+                  _builder.newLineIfNotEmpty();
+                } else {
+                  if ((stmt instanceof TryCatch)) {
+                    String _genCode_6 = this.genCode(((TryCatch) stmt));
+                    _builder.append(_genCode_6, "");
+                    _builder.newLineIfNotEmpty();
+                  } else {
+                    if ((stmt instanceof RaiseException)) {
+                      String _genCode_7 = this.genCode(((RaiseException) stmt));
+                      _builder.append(_genCode_7, "");
+                      _builder.newLineIfNotEmpty();
+                    }
+                  }
+                }
               }
             }
           }
@@ -375,6 +396,58 @@ public class OOPModelToCodeTransformation {
         _builder.newLine();
       }
     }
+    return _builder.toString();
+  }
+  
+  public String genCode(final Return ret) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("return ");
+    Expression _expression = ret.getExpression();
+    String _expressionString = _expression.getExpressionString();
+    _builder.append(_expressionString, "");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    return _builder.toString();
+  }
+  
+  public String genCode(final TryCatch trycatch) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("try {");
+    _builder.newLine();
+    {
+      EList<Statement> _try = trycatch.getTry();
+      for(final Statement s : _try) {
+        _builder.append("\t    ");
+        String _genCode = this.genCode(s);
+        _builder.append(_genCode, "\t    ");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.append("} catch(Throwable e)");
+    _builder.newLine();
+    _builder.append("{");
+    _builder.newLine();
+    {
+      EList<Statement> _catch = trycatch.getCatch();
+      for(final Statement s_1 : _catch) {
+        _builder.append("    ");
+        String _genCode_1 = this.genCode(s_1);
+        _builder.append(_genCode_1, "    ");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.append("}");
+    _builder.newLine();
+    return _builder.toString();
+  }
+  
+  public String genCode(final RaiseException raise) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("throw ");
+    Expression _expression = raise.getExpression();
+    String _expressionString = _expression.getExpressionString();
+    _builder.append(_expressionString, "");
+    _builder.newLineIfNotEmpty();
     return _builder.toString();
   }
   

@@ -48,8 +48,8 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Return" eSuperTypes="#//Statement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="returnexpression" lowerBound="1"
-        eType="#//Expression"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+        eType="#//Expression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TryCatch" eSuperTypes="#//Statement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="catch" upperBound="-1"
@@ -58,7 +58,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RaiseException" eSuperTypes="#//Statement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="exception" lowerBound="1"
-        eType="#//Expression"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
+        eType="#//Expression" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

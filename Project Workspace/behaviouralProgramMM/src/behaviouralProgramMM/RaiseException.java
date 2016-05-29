@@ -12,7 +12,7 @@ package behaviouralProgramMM;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link behaviouralProgramMM.RaiseException#getException <em>Exception</em>}</li>
+ *   <li>{@link behaviouralProgramMM.RaiseException#getExpression <em>Expression</em>}</li>
  * </ul>
  *
  * @see behaviouralProgramMM.BehaviouralProgramMMPackage#getRaiseException()
@@ -21,29 +21,29 @@ package behaviouralProgramMM;
  */
 public interface RaiseException extends Statement {
 	/**
-	 * Returns the value of the '<em><b>Exception</b></em>' reference.
+	 * Returns the value of the '<em><b>Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Exception</em>' reference isn't clear,
+	 * If the meaning of the '<em>Expression</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Exception</em>' reference.
-	 * @see #setException(Expression)
-	 * @see behaviouralProgramMM.BehaviouralProgramMMPackage#getRaiseException_Exception()
-	 * @model required="true"
+	 * @return the value of the '<em>Expression</em>' containment reference.
+	 * @see #setExpression(Expression)
+	 * @see behaviouralProgramMM.BehaviouralProgramMMPackage#getRaiseException_Expression()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Expression getException();
+	Expression getExpression();
 
 	/**
-	 * Sets the value of the '{@link behaviouralProgramMM.RaiseException#getException <em>Exception</em>}' reference.
+	 * Sets the value of the '{@link behaviouralProgramMM.RaiseException#getExpression <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Exception</em>' reference.
-	 * @see #getException()
+	 * @param value the new value of the '<em>Expression</em>' containment reference.
+	 * @see #getExpression()
 	 * @generated
 	 */
-	void setException(Expression value);
+	void setExpression(Expression value);
 
 } // RaiseException

@@ -8,6 +8,7 @@ import behaviouralProgramMM.Return;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -21,22 +22,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link behaviouralProgramMM.impl.ReturnImpl#getReturnexpression <em>Returnexpression</em>}</li>
+ *   <li>{@link behaviouralProgramMM.impl.ReturnImpl#getExpression <em>Expression</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ReturnImpl extends StatementImpl implements Return {
 	/**
-	 * The cached value of the '{@link #getReturnexpression() <em>Returnexpression</em>}' reference.
+	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReturnexpression()
+	 * @see #getExpression()
 	 * @generated
 	 * @ordered
 	 */
-	protected Expression returnexpression;
-
+	protected Expression expression;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -61,16 +61,23 @@ public class ReturnImpl extends StatementImpl implements Return {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Expression getReturnexpression() {
-		if (returnexpression != null && returnexpression.eIsProxy()) {
-			InternalEObject oldReturnexpression = (InternalEObject)returnexpression;
-			returnexpression = (Expression)eResolveProxy(oldReturnexpression);
-			if (returnexpression != oldReturnexpression) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BehaviouralProgramMMPackage.RETURN__RETURNEXPRESSION, oldReturnexpression, returnexpression));
-			}
+	public Expression getExpression() {
+		return expression;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetExpression(Expression newExpression, NotificationChain msgs) {
+		Expression oldExpression = expression;
+		expression = newExpression;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BehaviouralProgramMMPackage.RETURN__EXPRESSION, oldExpression, newExpression);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return returnexpression;
+		return msgs;
 	}
 
 	/**
@@ -78,8 +85,18 @@ public class ReturnImpl extends StatementImpl implements Return {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Expression basicGetReturnexpression() {
-		return returnexpression;
+	public void setExpression(Expression newExpression) {
+		if (newExpression != expression) {
+			NotificationChain msgs = null;
+			if (expression != null)
+				msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BehaviouralProgramMMPackage.RETURN__EXPRESSION, null, msgs);
+			if (newExpression != null)
+				msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BehaviouralProgramMMPackage.RETURN__EXPRESSION, null, msgs);
+			msgs = basicSetExpression(newExpression, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BehaviouralProgramMMPackage.RETURN__EXPRESSION, newExpression, newExpression));
 	}
 
 	/**
@@ -87,11 +104,13 @@ public class ReturnImpl extends StatementImpl implements Return {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReturnexpression(Expression newReturnexpression) {
-		Expression oldReturnexpression = returnexpression;
-		returnexpression = newReturnexpression;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BehaviouralProgramMMPackage.RETURN__RETURNEXPRESSION, oldReturnexpression, returnexpression));
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BehaviouralProgramMMPackage.RETURN__EXPRESSION:
+				return basicSetExpression(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -102,9 +121,8 @@ public class ReturnImpl extends StatementImpl implements Return {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BehaviouralProgramMMPackage.RETURN__RETURNEXPRESSION:
-				if (resolve) return getReturnexpression();
-				return basicGetReturnexpression();
+			case BehaviouralProgramMMPackage.RETURN__EXPRESSION:
+				return getExpression();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,8 +135,8 @@ public class ReturnImpl extends StatementImpl implements Return {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BehaviouralProgramMMPackage.RETURN__RETURNEXPRESSION:
-				setReturnexpression((Expression)newValue);
+			case BehaviouralProgramMMPackage.RETURN__EXPRESSION:
+				setExpression((Expression)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -132,8 +150,8 @@ public class ReturnImpl extends StatementImpl implements Return {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BehaviouralProgramMMPackage.RETURN__RETURNEXPRESSION:
-				setReturnexpression((Expression)null);
+			case BehaviouralProgramMMPackage.RETURN__EXPRESSION:
+				setExpression((Expression)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -147,8 +165,8 @@ public class ReturnImpl extends StatementImpl implements Return {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BehaviouralProgramMMPackage.RETURN__RETURNEXPRESSION:
-				return returnexpression != null;
+			case BehaviouralProgramMMPackage.RETURN__EXPRESSION:
+				return expression != null;
 		}
 		return super.eIsSet(featureID);
 	}

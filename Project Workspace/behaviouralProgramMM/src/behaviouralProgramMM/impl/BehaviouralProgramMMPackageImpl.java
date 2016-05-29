@@ -424,7 +424,7 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getReturn_Returnexpression() {
+	public EReference getReturn_Expression() {
 		return (EReference)returnEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -469,7 +469,7 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRaiseException_Exception() {
+	public EReference getRaiseException_Expression() {
 		return (EReference)raiseExceptionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -537,14 +537,14 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 		createEReference(instantiationEClass, INSTANTIATION__INITIATION_EXPRESSION);
 
 		returnEClass = createEClass(RETURN);
-		createEReference(returnEClass, RETURN__RETURNEXPRESSION);
+		createEReference(returnEClass, RETURN__EXPRESSION);
 
 		tryCatchEClass = createEClass(TRY_CATCH);
 		createEReference(tryCatchEClass, TRY_CATCH__CATCH);
 		createEReference(tryCatchEClass, TRY_CATCH__TRY);
 
 		raiseExceptionEClass = createEClass(RAISE_EXCEPTION);
-		createEReference(raiseExceptionEClass, RAISE_EXCEPTION__EXCEPTION);
+		createEReference(raiseExceptionEClass, RAISE_EXCEPTION__EXPRESSION);
 	}
 
 	/**
@@ -621,14 +621,14 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 		initEReference(getInstantiation_InitiationExpression(), this.getExpression(), null, "InitiationExpression", null, 0, 1, Instantiation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(returnEClass, Return.class, "Return", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getReturn_Returnexpression(), this.getExpression(), null, "returnexpression", null, 1, 1, Return.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getReturn_Expression(), this.getExpression(), null, "expression", null, 1, 1, Return.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tryCatchEClass, TryCatch.class, "TryCatch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTryCatch_Catch(), this.getStatement(), null, "catch", null, 0, -1, TryCatch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTryCatch_Try(), this.getStatement(), null, "try", null, 0, -1, TryCatch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(raiseExceptionEClass, RaiseException.class, "RaiseException", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRaiseException_Exception(), this.getExpression(), null, "exception", null, 1, 1, RaiseException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRaiseException_Expression(), this.getExpression(), null, "expression", null, 1, 1, RaiseException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

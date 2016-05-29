@@ -12,7 +12,7 @@ package behaviouralProgramMM;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link behaviouralProgramMM.Return#getReturnexpression <em>Returnexpression</em>}</li>
+ *   <li>{@link behaviouralProgramMM.Return#getExpression <em>Expression</em>}</li>
  * </ul>
  *
  * @see behaviouralProgramMM.BehaviouralProgramMMPackage#getReturn()
@@ -21,29 +21,29 @@ package behaviouralProgramMM;
  */
 public interface Return extends Statement {
 	/**
-	 * Returns the value of the '<em><b>Returnexpression</b></em>' reference.
+	 * Returns the value of the '<em><b>Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Returnexpression</em>' reference isn't clear,
+	 * If the meaning of the '<em>Expression</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Returnexpression</em>' reference.
-	 * @see #setReturnexpression(Expression)
-	 * @see behaviouralProgramMM.BehaviouralProgramMMPackage#getReturn_Returnexpression()
-	 * @model required="true"
+	 * @return the value of the '<em>Expression</em>' containment reference.
+	 * @see #setExpression(Expression)
+	 * @see behaviouralProgramMM.BehaviouralProgramMMPackage#getReturn_Expression()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Expression getReturnexpression();
+	Expression getExpression();
 
 	/**
-	 * Sets the value of the '{@link behaviouralProgramMM.Return#getReturnexpression <em>Returnexpression</em>}' reference.
+	 * Sets the value of the '{@link behaviouralProgramMM.Return#getExpression <em>Expression</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Returnexpression</em>' reference.
-	 * @see #getReturnexpression()
+	 * @param value the new value of the '<em>Expression</em>' containment reference.
+	 * @see #getExpression()
 	 * @generated
 	 */
-	void setReturnexpression(Expression value);
+	void setExpression(Expression value);
 
 } // Return

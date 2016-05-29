@@ -474,13 +474,13 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 	int RETURN = 9;
 
 	/**
-	 * The feature id for the '<em><b>Returnexpression</b></em>' reference.
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RETURN__RETURNEXPRESSION = STATEMENT_FEATURE_COUNT + 0;
+	int RETURN__EXPRESSION = STATEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Return</em>' class.
@@ -557,13 +557,13 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 	int RAISE_EXCEPTION = 11;
 
 	/**
-	 * The feature id for the '<em><b>Exception</b></em>' reference.
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RAISE_EXCEPTION__EXCEPTION = STATEMENT_FEATURE_COUNT + 0;
+	int RAISE_EXCEPTION__EXPRESSION = STATEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Raise Exception</em>' class.
@@ -872,15 +872,15 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 	EClass getReturn();
 
 	/**
-	 * Returns the meta object for the reference '{@link behaviouralProgramMM.Return#getReturnexpression <em>Returnexpression</em>}'.
+	 * Returns the meta object for the containment reference '{@link behaviouralProgramMM.Return#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Returnexpression</em>'.
-	 * @see behaviouralProgramMM.Return#getReturnexpression()
+	 * @return the meta object for the containment reference '<em>Expression</em>'.
+	 * @see behaviouralProgramMM.Return#getExpression()
 	 * @see #getReturn()
 	 * @generated
 	 */
-	EReference getReturn_Returnexpression();
+	EReference getReturn_Expression();
 
 	/**
 	 * Returns the meta object for class '{@link behaviouralProgramMM.TryCatch <em>Try Catch</em>}'.
@@ -925,15 +925,15 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 	EClass getRaiseException();
 
 	/**
-	 * Returns the meta object for the reference '{@link behaviouralProgramMM.RaiseException#getException <em>Exception</em>}'.
+	 * Returns the meta object for the containment reference '{@link behaviouralProgramMM.RaiseException#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Exception</em>'.
-	 * @see behaviouralProgramMM.RaiseException#getException()
+	 * @return the meta object for the containment reference '<em>Expression</em>'.
+	 * @see behaviouralProgramMM.RaiseException#getExpression()
 	 * @see #getRaiseException()
 	 * @generated
 	 */
-	EReference getRaiseException_Exception();
+	EReference getRaiseException_Expression();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1195,12 +1195,12 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 		EClass RETURN = eINSTANCE.getReturn();
 
 		/**
-		 * The meta object literal for the '<em><b>Returnexpression</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RETURN__RETURNEXPRESSION = eINSTANCE.getReturn_Returnexpression();
+		EReference RETURN__EXPRESSION = eINSTANCE.getReturn_Expression();
 
 		/**
 		 * The meta object literal for the '{@link behaviouralProgramMM.impl.TryCatchImpl <em>Try Catch</em>}' class.
@@ -1239,12 +1239,12 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 		EClass RAISE_EXCEPTION = eINSTANCE.getRaiseException();
 
 		/**
-		 * The meta object literal for the '<em><b>Exception</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RAISE_EXCEPTION__EXCEPTION = eINSTANCE.getRaiseException_Exception();
+		EReference RAISE_EXCEPTION__EXPRESSION = eINSTANCE.getRaiseException_Expression();
 
 	}
 
