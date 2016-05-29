@@ -40,5 +40,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviouralProgramMM.ecore#//Instantiation/VarType"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//Instantiation/InitiationExpression"/>
     </genClasses>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//Return">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//Return/returnexpression"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//TryCatch">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//TryCatch/catch"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//TryCatch/try"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//RaiseException">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//RaiseException/exception"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

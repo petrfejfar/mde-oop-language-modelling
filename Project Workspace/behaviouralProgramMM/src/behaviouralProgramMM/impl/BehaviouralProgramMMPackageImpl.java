@@ -12,8 +12,11 @@ import behaviouralProgramMM.Function;
 import behaviouralProgramMM.FunctionCall;
 import behaviouralProgramMM.Instantiation;
 import behaviouralProgramMM.Loop;
+import behaviouralProgramMM.RaiseException;
+import behaviouralProgramMM.Return;
 import behaviouralProgramMM.Statement;
 
+import behaviouralProgramMM.TryCatch;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -90,6 +93,27 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 	 * @generated
 	 */
 	private EClass instantiationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass returnEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tryCatchEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass raiseExceptionEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -391,6 +415,69 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getReturn() {
+		return returnEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getReturn_Returnexpression() {
+		return (EReference)returnEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTryCatch() {
+		return tryCatchEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTryCatch_Catch() {
+		return (EReference)tryCatchEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTryCatch_Try() {
+		return (EReference)tryCatchEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRaiseException() {
+		return raiseExceptionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRaiseException_Exception() {
+		return (EReference)raiseExceptionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public BehaviouralProgramMMFactory getBehaviouralProgramMMFactory() {
 		return (BehaviouralProgramMMFactory)getEFactoryInstance();
 	}
@@ -448,6 +535,16 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 		createEAttribute(instantiationEClass, INSTANTIATION__VAR_NAME);
 		createEAttribute(instantiationEClass, INSTANTIATION__VAR_TYPE);
 		createEReference(instantiationEClass, INSTANTIATION__INITIATION_EXPRESSION);
+
+		returnEClass = createEClass(RETURN);
+		createEReference(returnEClass, RETURN__RETURNEXPRESSION);
+
+		tryCatchEClass = createEClass(TRY_CATCH);
+		createEReference(tryCatchEClass, TRY_CATCH__CATCH);
+		createEReference(tryCatchEClass, TRY_CATCH__TRY);
+
+		raiseExceptionEClass = createEClass(RAISE_EXCEPTION);
+		createEReference(raiseExceptionEClass, RAISE_EXCEPTION__EXCEPTION);
 	}
 
 	/**
@@ -483,6 +580,9 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 		loopEClass.getESuperTypes().add(this.getStatement());
 		functionCallEClass.getESuperTypes().add(this.getStatement());
 		instantiationEClass.getESuperTypes().add(this.getStatement());
+		returnEClass.getESuperTypes().add(this.getStatement());
+		tryCatchEClass.getESuperTypes().add(this.getStatement());
+		raiseExceptionEClass.getESuperTypes().add(this.getStatement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(behaviourEClass, Behaviour.class, "Behaviour", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -519,6 +619,16 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 		initEAttribute(getInstantiation_VarName(), ecorePackage.getEString(), "VarName", null, 0, 1, Instantiation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInstantiation_VarType(), ecorePackage.getEString(), "VarType", null, 0, 1, Instantiation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInstantiation_InitiationExpression(), this.getExpression(), null, "InitiationExpression", null, 0, 1, Instantiation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(returnEClass, Return.class, "Return", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getReturn_Returnexpression(), this.getExpression(), null, "returnexpression", null, 1, 1, Return.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tryCatchEClass, TryCatch.class, "TryCatch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTryCatch_Catch(), this.getStatement(), null, "catch", null, 0, -1, TryCatch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTryCatch_Try(), this.getStatement(), null, "try", null, 0, -1, TryCatch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(raiseExceptionEClass, RaiseException.class, "RaiseException", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRaiseException_Exception(), this.getExpression(), null, "exception", null, 1, 1, RaiseException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

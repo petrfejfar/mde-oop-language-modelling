@@ -30,7 +30,7 @@ public class OOPModelToCodeTransformation {
 	}
 	def String genCode(structuralProgramMM.Class c)
 	'''
-	public class «c.name»
+	class «c.name»
 	{
 	    /* Generated class variables */
 	    «FOR v : c.variables»

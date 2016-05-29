@@ -46,7 +46,7 @@ public class OOPModelToCodeTransformation {
   
   public String genCode(final structuralProgramMM.Class c) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("public class ");
+    _builder.append("class ");
     String _name = c.getName();
     _builder.append(_name, "");
     _builder.newLineIfNotEmpty();

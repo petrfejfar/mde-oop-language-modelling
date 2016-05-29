@@ -464,6 +464,127 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link behaviouralProgramMM.impl.ReturnImpl <em>Return</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see behaviouralProgramMM.impl.ReturnImpl
+	 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getReturn()
+	 * @generated
+	 */
+	int RETURN = 9;
+
+	/**
+	 * The feature id for the '<em><b>Returnexpression</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN__RETURNEXPRESSION = STATEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Return</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Return</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link behaviouralProgramMM.impl.TryCatchImpl <em>Try Catch</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see behaviouralProgramMM.impl.TryCatchImpl
+	 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getTryCatch()
+	 * @generated
+	 */
+	int TRY_CATCH = 10;
+
+	/**
+	 * The feature id for the '<em><b>Catch</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRY_CATCH__CATCH = STATEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Try</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRY_CATCH__TRY = STATEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Try Catch</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRY_CATCH_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Try Catch</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRY_CATCH_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link behaviouralProgramMM.impl.RaiseExceptionImpl <em>Raise Exception</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see behaviouralProgramMM.impl.RaiseExceptionImpl
+	 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getRaiseException()
+	 * @generated
+	 */
+	int RAISE_EXCEPTION = 11;
+
+	/**
+	 * The feature id for the '<em><b>Exception</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RAISE_EXCEPTION__EXCEPTION = STATEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Raise Exception</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RAISE_EXCEPTION_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Raise Exception</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RAISE_EXCEPTION_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link behaviouralProgramMM.Behaviour <em>Behaviour</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -741,6 +862,80 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 	EReference getInstantiation_InitiationExpression();
 
 	/**
+	 * Returns the meta object for class '{@link behaviouralProgramMM.Return <em>Return</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Return</em>'.
+	 * @see behaviouralProgramMM.Return
+	 * @generated
+	 */
+	EClass getReturn();
+
+	/**
+	 * Returns the meta object for the reference '{@link behaviouralProgramMM.Return#getReturnexpression <em>Returnexpression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Returnexpression</em>'.
+	 * @see behaviouralProgramMM.Return#getReturnexpression()
+	 * @see #getReturn()
+	 * @generated
+	 */
+	EReference getReturn_Returnexpression();
+
+	/**
+	 * Returns the meta object for class '{@link behaviouralProgramMM.TryCatch <em>Try Catch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Try Catch</em>'.
+	 * @see behaviouralProgramMM.TryCatch
+	 * @generated
+	 */
+	EClass getTryCatch();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link behaviouralProgramMM.TryCatch#getCatch <em>Catch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Catch</em>'.
+	 * @see behaviouralProgramMM.TryCatch#getCatch()
+	 * @see #getTryCatch()
+	 * @generated
+	 */
+	EReference getTryCatch_Catch();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link behaviouralProgramMM.TryCatch#getTry <em>Try</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Try</em>'.
+	 * @see behaviouralProgramMM.TryCatch#getTry()
+	 * @see #getTryCatch()
+	 * @generated
+	 */
+	EReference getTryCatch_Try();
+
+	/**
+	 * Returns the meta object for class '{@link behaviouralProgramMM.RaiseException <em>Raise Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Raise Exception</em>'.
+	 * @see behaviouralProgramMM.RaiseException
+	 * @generated
+	 */
+	EClass getRaiseException();
+
+	/**
+	 * Returns the meta object for the reference '{@link behaviouralProgramMM.RaiseException#getException <em>Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Exception</em>'.
+	 * @see behaviouralProgramMM.RaiseException#getException()
+	 * @see #getRaiseException()
+	 * @generated
+	 */
+	EReference getRaiseException_Exception();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -988,6 +1183,68 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 		 * @generated
 		 */
 		EReference INSTANTIATION__INITIATION_EXPRESSION = eINSTANCE.getInstantiation_InitiationExpression();
+
+		/**
+		 * The meta object literal for the '{@link behaviouralProgramMM.impl.ReturnImpl <em>Return</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see behaviouralProgramMM.impl.ReturnImpl
+		 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getReturn()
+		 * @generated
+		 */
+		EClass RETURN = eINSTANCE.getReturn();
+
+		/**
+		 * The meta object literal for the '<em><b>Returnexpression</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RETURN__RETURNEXPRESSION = eINSTANCE.getReturn_Returnexpression();
+
+		/**
+		 * The meta object literal for the '{@link behaviouralProgramMM.impl.TryCatchImpl <em>Try Catch</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see behaviouralProgramMM.impl.TryCatchImpl
+		 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getTryCatch()
+		 * @generated
+		 */
+		EClass TRY_CATCH = eINSTANCE.getTryCatch();
+
+		/**
+		 * The meta object literal for the '<em><b>Catch</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRY_CATCH__CATCH = eINSTANCE.getTryCatch_Catch();
+
+		/**
+		 * The meta object literal for the '<em><b>Try</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRY_CATCH__TRY = eINSTANCE.getTryCatch_Try();
+
+		/**
+		 * The meta object literal for the '{@link behaviouralProgramMM.impl.RaiseExceptionImpl <em>Raise Exception</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see behaviouralProgramMM.impl.RaiseExceptionImpl
+		 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getRaiseException()
+		 * @generated
+		 */
+		EClass RAISE_EXCEPTION = eINSTANCE.getRaiseException();
+
+		/**
+		 * The meta object literal for the '<em><b>Exception</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RAISE_EXCEPTION__EXCEPTION = eINSTANCE.getRaiseException_Exception();
 
 	}
 

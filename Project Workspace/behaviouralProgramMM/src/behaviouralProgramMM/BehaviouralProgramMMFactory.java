@@ -94,6 +94,33 @@ public interface BehaviouralProgramMMFactory extends EFactory {
 	Instantiation createInstantiation();
 
 	/**
+	 * Returns a new object of class '<em>Return</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Return</em>'.
+	 * @generated
+	 */
+	Return createReturn();
+
+	/**
+	 * Returns a new object of class '<em>Try Catch</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Try Catch</em>'.
+	 * @generated
+	 */
+	TryCatch createTryCatch();
+
+	/**
+	 * Returns a new object of class '<em>Raise Exception</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Raise Exception</em>'.
+	 * @generated
+	 */
+	RaiseException createRaiseException();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

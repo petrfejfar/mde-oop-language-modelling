@@ -104,6 +104,18 @@ public class BehaviouralProgramMMAdapterFactory extends AdapterFactoryImpl {
 				return createInstantiationAdapter();
 			}
 			@Override
+			public Adapter caseReturn(Return object) {
+				return createReturnAdapter();
+			}
+			@Override
+			public Adapter caseTryCatch(TryCatch object) {
+				return createTryCatchAdapter();
+			}
+			@Override
+			public Adapter caseRaiseException(RaiseException object) {
+				return createRaiseExceptionAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -246,6 +258,48 @@ public class BehaviouralProgramMMAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInstantiationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link behaviouralProgramMM.Return <em>Return</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see behaviouralProgramMM.Return
+	 * @generated
+	 */
+	public Adapter createReturnAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link behaviouralProgramMM.TryCatch <em>Try Catch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see behaviouralProgramMM.TryCatch
+	 * @generated
+	 */
+	public Adapter createTryCatchAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link behaviouralProgramMM.RaiseException <em>Raise Exception</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see behaviouralProgramMM.RaiseException
+	 * @generated
+	 */
+	public Adapter createRaiseExceptionAdapter() {
 		return null;
 	}
 

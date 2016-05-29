@@ -64,6 +64,9 @@ public class BehaviouralProgramMMFactoryImpl extends EFactoryImpl implements Beh
 			case BehaviouralProgramMMPackage.FUNCTION_CALL: return createFunctionCall();
 			case BehaviouralProgramMMPackage.EXPRESSION: return createExpression();
 			case BehaviouralProgramMMPackage.INSTANTIATION: return createInstantiation();
+			case BehaviouralProgramMMPackage.RETURN: return createReturn();
+			case BehaviouralProgramMMPackage.TRY_CATCH: return createTryCatch();
+			case BehaviouralProgramMMPackage.RAISE_EXCEPTION: return createRaiseException();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -147,6 +150,36 @@ public class BehaviouralProgramMMFactoryImpl extends EFactoryImpl implements Beh
 	public Instantiation createInstantiation() {
 		InstantiationImpl instantiation = new InstantiationImpl();
 		return instantiation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Return createReturn() {
+		ReturnImpl return_ = new ReturnImpl();
+		return return_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TryCatch createTryCatch() {
+		TryCatchImpl tryCatch = new TryCatchImpl();
+		return tryCatch;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RaiseException createRaiseException() {
+		RaiseExceptionImpl raiseException = new RaiseExceptionImpl();
+		return raiseException;
 	}
 
 	/**

@@ -47,4 +47,18 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="InitiationExpression" eType="#//Expression"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Return" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="returnexpression" lowerBound="1"
+        eType="#//Expression"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TryCatch" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="catch" upperBound="-1"
+        eType="#//Statement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="try" upperBound="-1" eType="#//Statement"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RaiseException" eSuperTypes="#//Statement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exception" lowerBound="1"
+        eType="#//Expression"/>
+  </eClassifiers>
 </ecore:EPackage>
