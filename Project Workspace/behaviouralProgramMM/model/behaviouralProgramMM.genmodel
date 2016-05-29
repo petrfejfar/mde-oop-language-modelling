@@ -32,9 +32,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviouralProgramMM.ecore#//FunctionCall/FuncName"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//FunctionCall/arguments"/>
     </genClasses>
-    <genClasses ecoreClass="behaviouralProgramMM.ecore#//Expression">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviouralProgramMM.ecore#//Expression/ExpressionString"/>
-    </genClasses>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//Expression"/>
     <genClasses ecoreClass="behaviouralProgramMM.ecore#//Instantiation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviouralProgramMM.ecore#//Instantiation/VarName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviouralProgramMM.ecore#//Instantiation/VarType"/>
@@ -49,6 +47,27 @@
     </genClasses>
     <genClasses ecoreClass="behaviouralProgramMM.ecore#//RaiseException">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//RaiseException/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//ReadLine"/>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//ArithmeticInfixOperator"/>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//Plus"/>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//FunctionCallStatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviouralProgramMM.ecore#//FunctionCallStatement/FuncName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//FunctionCallStatement/arguments"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//ReadLineStatement"/>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//WriteLineStatement"/>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//ComparsionOperator"/>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//Equals"/>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviouralProgramMM.ecore#//Variable/VarName"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//Literal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute behaviouralProgramMM.ecore#//Literal/Value"/>
+    </genClasses>
+    <genClasses ecoreClass="behaviouralProgramMM.ecore#//BinaryOperator">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//BinaryOperator/leftSide"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference behaviouralProgramMM.ecore#//BinaryOperator/rightSide"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
