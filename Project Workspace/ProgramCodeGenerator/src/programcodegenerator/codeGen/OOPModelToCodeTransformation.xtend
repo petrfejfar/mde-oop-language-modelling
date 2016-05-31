@@ -16,6 +16,14 @@ import behaviouralProgramMM.Instantiation
 import behaviouralProgramMM.Return
 import behaviouralProgramMM.TryCatch
 import behaviouralProgramMM.RaiseException
+import behaviouralProgramMM.Literal
+import behaviouralProgramMM.ReadLine
+import behaviouralProgramMM.FunctionCallStatement
+import behaviouralProgramMM.BinaryOperator
+import behaviouralProgramMM.Plus
+import behaviouralProgramMM.Equals
+import behaviouralProgramMM.WriteLineStatement
+import behaviouralProgramMM.ReadLineStatement
 
 public class OOPModelToCodeTransformation extends OOPModelToCodeTransformationSuperClass {
 	
@@ -111,8 +119,8 @@ public class OOPModelToCodeTransformation extends OOPModelToCodeTransformationSu
 	'''	
 	«IF stmt instanceof Loop»
 	«(stmt as Loop).genCode»
-	«ELSEIF stmt instanceof FunctionCall»
-	«(stmt as FunctionCall).genCode»;
+	«ELSEIF stmt instanceof FunctionCallStatement»
+	«(stmt as FunctionCallStatement).genCode»;
 	«ELSEIF stmt instanceof Assignment»
 	«(stmt as Assignment).genCode»;
 	«ELSEIF stmt instanceof Instantiation»
@@ -128,24 +136,67 @@ public class OOPModelToCodeTransformation extends OOPModelToCodeTransformationSu
 	«ENDIF»
 	'''
 	
+	def String genCode(Expression stmt)
+	'''	
+	«IF stmt instanceof Literal»
+	«(stmt as Literal).genCode»
+	«ELSEIF stmt instanceof behaviouralProgramMM.Variable»
+	«(stmt as behaviouralProgramMM.Variable).genCode»
+	«ELSEIF stmt instanceof ReadLine»
+	«(stmt as ReadLine).genCode»
+	«ELSEIF stmt instanceof FunctionCall»
+	«(stmt as FunctionCall).genCode»
+	«ELSEIF stmt instanceof BinaryOperator»
+	«(stmt as BinaryOperator).genCode»
+	«ENDIF»'''
+	
+	def String genCode(Literal lit)
+	'''«lit.value»'''
+	
+	def String genCode(behaviouralProgramMM.Variable vari)
+	'''«vari.varName»'''
+	
+	def String genCode(ReadLine rl)
+	'''new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.System.in)).readLine()'''
+	
+	def String genCode(FunctionCall fnccl)
+	'''«fnccl.funcName»(«fnccl.arguments.argList»)'''
+	
+	def String genCode(BinaryOperator binop)
+	'''
+	«IF binop instanceof Plus»
+	(«binop.leftSide.genCode»+«binop.rightSide.genCode»)
+	«ELSEIF binop instanceof Equals»
+	(«binop.leftSide.genCode»==«binop.rightSide.genCode»)
+	«ENDIF»'''
+	
+	
 	def String genCode(Loop loop)
 	'''
-	while («loop.loopexpression.expressionString»)
+	while («loop.loopexpression.genCode»)
 	{
 	    «FOR s : loop.loopstatements»
 	    «s.genCode»
 	    «ENDFOR»
 	}
 	'''
-	def String genCode(FunctionCall funcCall)
-	'''«funcCall.funcName»(«funcCall.arguments.getArgList»)'''
+	def String genCode(FunctionCallStatement funcCall)
+	'''
+	«IF funcCall instanceof WriteLineStatement»
+	java.lang.System.out.println(«funcCall.arguments.argList»)
+	«ELSEIF funcCall instanceof ReadLineStatement»
+	new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.System.in)).readLine()
+	«ELSE»
+	«funcCall.funcName»(«funcCall.arguments.argList»)
+	«ENDIF»
+	'''
 	
 	def String genCode(Assignment assign)
-	'''«assign.variableName» = «assign.assignexpression.expressionString»'''
+	'''«assign.variableName» = «assign.assignexpression.genCode»'''
 	
 	def String genCode(ConditionalBranch branch)
 	'''
-	if(«branch.ifexpression.expressionString»)
+	if(«branch.ifexpression.genCode»)
 	{
 	    «FOR s : branch.ifstatements»
 	    «s.genCode»
@@ -162,7 +213,7 @@ public class OOPModelToCodeTransformation extends OOPModelToCodeTransformationSu
 	'''
 	def String genCode(Return ret)
 	'''
-	return «ret.expression.expressionString»;
+	return «ret.expression.genCode»;
 	'''
 	def String genCode(TryCatch trycatch)
 	'''
@@ -179,7 +230,7 @@ public class OOPModelToCodeTransformation extends OOPModelToCodeTransformationSu
 	'''
 	def String genCode(RaiseException raise)
 	'''
-	throw «raise.expression.expressionString»
+	throw «raise.expression.genCode»;
 	'''
 	
 	def String genCode(Instantiation instantiation)
@@ -187,7 +238,7 @@ public class OOPModelToCodeTransformation extends OOPModelToCodeTransformationSu
 		var s = '''«instantiation.varType» «instantiation.varName»'''
 		if(instantiation.initiationExpression != null)
 		{
-			s += ''' = «instantiation.initiationExpression.expressionString»'''
+			s += ''' = «instantiation.initiationExpression.genCode»'''
 		}
 		s
 	}
@@ -196,10 +247,10 @@ public class OOPModelToCodeTransformation extends OOPModelToCodeTransformationSu
 		var s = ""
 		for(var i = 0; i < exprs.size - 1; i++)
 		{
-			s += exprs.get(i).expressionString + ", "
+			s += exprs.get(i).genCode + ", "
 		}
 		if(exprs.size > 0)
-		s += exprs.get(exprs.size-1).expressionString
+		s += exprs.get(exprs.size-1).genCode
 		s
 	}
 }

@@ -3,24 +3,24 @@
 package behaviouralProgramMM.impl;
 
 import behaviouralProgramMM.BehaviouralProgramMMPackage;
-import behaviouralProgramMM.Expression;
+import behaviouralProgramMM.ComparsionOperator;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Expression</b></em>'.
+ * An implementation of the model object '<em><b>Comparsion Operator</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public abstract class ExpressionImpl extends MinimalEObjectImpl.Container implements Expression {
+public abstract class ComparsionOperatorImpl extends BinaryOperatorImpl implements ComparsionOperator {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ExpressionImpl() {
+	protected ComparsionOperatorImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public abstract class ExpressionImpl extends MinimalEObjectImpl.Container implem
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BehaviouralProgramMMPackage.Literals.EXPRESSION;
+		return BehaviouralProgramMMPackage.Literals.COMPARSION_OPERATOR;
 	}
 
-} //ExpressionImpl
+} //ComparsionOperatorImpl

@@ -108,7 +108,7 @@ public class BehaviouralProgramMMSwitch<T> extends Switch<T> {
 			case BehaviouralProgramMMPackage.FUNCTION_CALL: {
 				FunctionCall functionCall = (FunctionCall)theEObject;
 				T result = caseFunctionCall(functionCall);
-				if (result == null) result = caseStatement(functionCall);
+				if (result == null) result = caseExpression(functionCall);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -143,6 +143,91 @@ public class BehaviouralProgramMMSwitch<T> extends Switch<T> {
 				RaiseException raiseException = (RaiseException)theEObject;
 				T result = caseRaiseException(raiseException);
 				if (result == null) result = caseStatement(raiseException);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BehaviouralProgramMMPackage.READ_LINE: {
+				ReadLine readLine = (ReadLine)theEObject;
+				T result = caseReadLine(readLine);
+				if (result == null) result = caseExpression(readLine);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BehaviouralProgramMMPackage.ARITHMETIC_INFIX_OPERATOR: {
+				ArithmeticInfixOperator arithmeticInfixOperator = (ArithmeticInfixOperator)theEObject;
+				T result = caseArithmeticInfixOperator(arithmeticInfixOperator);
+				if (result == null) result = caseBinaryOperator(arithmeticInfixOperator);
+				if (result == null) result = caseExpression(arithmeticInfixOperator);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BehaviouralProgramMMPackage.PLUS: {
+				Plus plus = (Plus)theEObject;
+				T result = casePlus(plus);
+				if (result == null) result = caseArithmeticInfixOperator(plus);
+				if (result == null) result = caseBinaryOperator(plus);
+				if (result == null) result = caseExpression(plus);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BehaviouralProgramMMPackage.FUNCTION_CALL_STATEMENT: {
+				FunctionCallStatement functionCallStatement = (FunctionCallStatement)theEObject;
+				T result = caseFunctionCallStatement(functionCallStatement);
+				if (result == null) result = caseStatement(functionCallStatement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BehaviouralProgramMMPackage.READ_LINE_STATEMENT: {
+				ReadLineStatement readLineStatement = (ReadLineStatement)theEObject;
+				T result = caseReadLineStatement(readLineStatement);
+				if (result == null) result = caseFunctionCallStatement(readLineStatement);
+				if (result == null) result = caseStatement(readLineStatement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BehaviouralProgramMMPackage.WRITE_LINE_STATEMENT: {
+				WriteLineStatement writeLineStatement = (WriteLineStatement)theEObject;
+				T result = caseWriteLineStatement(writeLineStatement);
+				if (result == null) result = caseFunctionCallStatement(writeLineStatement);
+				if (result == null) result = caseStatement(writeLineStatement);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BehaviouralProgramMMPackage.COMPARSION_OPERATOR: {
+				ComparsionOperator comparsionOperator = (ComparsionOperator)theEObject;
+				T result = caseComparsionOperator(comparsionOperator);
+				if (result == null) result = caseBinaryOperator(comparsionOperator);
+				if (result == null) result = caseExpression(comparsionOperator);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BehaviouralProgramMMPackage.EQUALS: {
+				Equals equals = (Equals)theEObject;
+				T result = caseEquals(equals);
+				if (result == null) result = caseComparsionOperator(equals);
+				if (result == null) result = caseBinaryOperator(equals);
+				if (result == null) result = caseExpression(equals);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BehaviouralProgramMMPackage.VARIABLE: {
+				Variable variable = (Variable)theEObject;
+				T result = caseVariable(variable);
+				if (result == null) result = caseExpression(variable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BehaviouralProgramMMPackage.LITERAL: {
+				Literal literal = (Literal)theEObject;
+				T result = caseLiteral(literal);
+				if (result == null) result = caseExpression(literal);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BehaviouralProgramMMPackage.BINARY_OPERATOR: {
+				BinaryOperator binaryOperator = (BinaryOperator)theEObject;
+				T result = caseBinaryOperator(binaryOperator);
+				if (result == null) result = caseExpression(binaryOperator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -327,6 +412,171 @@ public class BehaviouralProgramMMSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRaiseException(RaiseException object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Read Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Read Line</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReadLine(ReadLine object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Arithmetic Infix Operator</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Arithmetic Infix Operator</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArithmeticInfixOperator(ArithmeticInfixOperator object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Plus</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Plus</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePlus(Plus object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Function Call Statement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Function Call Statement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFunctionCallStatement(FunctionCallStatement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Read Line Statement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Read Line Statement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReadLineStatement(ReadLineStatement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Write Line Statement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Write Line Statement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWriteLineStatement(WriteLineStatement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Comparsion Operator</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Comparsion Operator</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComparsionOperator(ComparsionOperator object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Equals</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Equals</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEquals(Equals object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVariable(Variable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Literal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLiteral(Literal object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Binary Operator</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Binary Operator</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBinaryOperator(BinaryOperator object) {
 		return null;
 	}
 

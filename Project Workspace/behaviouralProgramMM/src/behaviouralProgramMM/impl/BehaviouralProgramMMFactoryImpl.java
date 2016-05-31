@@ -62,11 +62,18 @@ public class BehaviouralProgramMMFactoryImpl extends EFactoryImpl implements Beh
 			case BehaviouralProgramMMPackage.CONDITIONAL_BRANCH: return createConditionalBranch();
 			case BehaviouralProgramMMPackage.LOOP: return createLoop();
 			case BehaviouralProgramMMPackage.FUNCTION_CALL: return createFunctionCall();
-			case BehaviouralProgramMMPackage.EXPRESSION: return createExpression();
 			case BehaviouralProgramMMPackage.INSTANTIATION: return createInstantiation();
 			case BehaviouralProgramMMPackage.RETURN: return createReturn();
 			case BehaviouralProgramMMPackage.TRY_CATCH: return createTryCatch();
 			case BehaviouralProgramMMPackage.RAISE_EXCEPTION: return createRaiseException();
+			case BehaviouralProgramMMPackage.READ_LINE: return createReadLine();
+			case BehaviouralProgramMMPackage.PLUS: return createPlus();
+			case BehaviouralProgramMMPackage.FUNCTION_CALL_STATEMENT: return createFunctionCallStatement();
+			case BehaviouralProgramMMPackage.READ_LINE_STATEMENT: return createReadLineStatement();
+			case BehaviouralProgramMMPackage.WRITE_LINE_STATEMENT: return createWriteLineStatement();
+			case BehaviouralProgramMMPackage.EQUALS: return createEquals();
+			case BehaviouralProgramMMPackage.VARIABLE: return createVariable();
+			case BehaviouralProgramMMPackage.LITERAL: return createLiteral();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -137,16 +144,6 @@ public class BehaviouralProgramMMFactoryImpl extends EFactoryImpl implements Beh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Expression createExpression() {
-		ExpressionImpl expression = new ExpressionImpl();
-		return expression;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Instantiation createInstantiation() {
 		InstantiationImpl instantiation = new InstantiationImpl();
 		return instantiation;
@@ -180,6 +177,86 @@ public class BehaviouralProgramMMFactoryImpl extends EFactoryImpl implements Beh
 	public RaiseException createRaiseException() {
 		RaiseExceptionImpl raiseException = new RaiseExceptionImpl();
 		return raiseException;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ReadLine createReadLine() {
+		ReadLineImpl readLine = new ReadLineImpl();
+		return readLine;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Plus createPlus() {
+		PlusImpl plus = new PlusImpl();
+		return plus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FunctionCallStatement createFunctionCallStatement() {
+		FunctionCallStatementImpl functionCallStatement = new FunctionCallStatementImpl();
+		return functionCallStatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ReadLineStatement createReadLineStatement() {
+		ReadLineStatementImpl readLineStatement = new ReadLineStatementImpl();
+		return readLineStatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public WriteLineStatement createWriteLineStatement() {
+		WriteLineStatementImpl writeLineStatement = new WriteLineStatementImpl();
+		return writeLineStatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Equals createEquals() {
+		EqualsImpl equals = new EqualsImpl();
+		return equals;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Variable createVariable() {
+		VariableImpl variable = new VariableImpl();
+		return variable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Literal createLiteral() {
+		LiteralImpl literal = new LiteralImpl();
+		return literal;
 	}
 
 	/**

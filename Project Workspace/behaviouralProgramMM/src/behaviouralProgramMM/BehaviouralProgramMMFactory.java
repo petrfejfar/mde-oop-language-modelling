@@ -76,15 +76,6 @@ public interface BehaviouralProgramMMFactory extends EFactory {
 	FunctionCall createFunctionCall();
 
 	/**
-	 * Returns a new object of class '<em>Expression</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Expression</em>'.
-	 * @generated
-	 */
-	Expression createExpression();
-
-	/**
 	 * Returns a new object of class '<em>Instantiation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,6 +110,78 @@ public interface BehaviouralProgramMMFactory extends EFactory {
 	 * @generated
 	 */
 	RaiseException createRaiseException();
+
+	/**
+	 * Returns a new object of class '<em>Read Line</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Read Line</em>'.
+	 * @generated
+	 */
+	ReadLine createReadLine();
+
+	/**
+	 * Returns a new object of class '<em>Plus</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Plus</em>'.
+	 * @generated
+	 */
+	Plus createPlus();
+
+	/**
+	 * Returns a new object of class '<em>Function Call Statement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Function Call Statement</em>'.
+	 * @generated
+	 */
+	FunctionCallStatement createFunctionCallStatement();
+
+	/**
+	 * Returns a new object of class '<em>Read Line Statement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Read Line Statement</em>'.
+	 * @generated
+	 */
+	ReadLineStatement createReadLineStatement();
+
+	/**
+	 * Returns a new object of class '<em>Write Line Statement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Write Line Statement</em>'.
+	 * @generated
+	 */
+	WriteLineStatement createWriteLineStatement();
+
+	/**
+	 * Returns a new object of class '<em>Equals</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Equals</em>'.
+	 * @generated
+	 */
+	Equals createEquals();
+
+	/**
+	 * Returns a new object of class '<em>Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Variable</em>'.
+	 * @generated
+	 */
+	Variable createVariable();
+
+	/**
+	 * Returns a new object of class '<em>Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Literal</em>'.
+	 * @generated
+	 */
+	Literal createLiteral();
 
 	/**
 	 * Returns the package supported by this factory.

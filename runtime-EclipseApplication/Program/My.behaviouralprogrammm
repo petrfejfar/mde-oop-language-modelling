@@ -1,52 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <behaviouralProgramMM:Behaviour xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:behaviouralProgramMM="http://www.example.org/behaviouralProgramMM">
-  <functions Name="Runner.Foo">
-    <functionBody xsi:type="behaviouralProgramMM:Assignment" VariableName="i">
-      <assignexpression ExpressionString="0"/>
-    </functionBody>
-    <functionBody xsi:type="behaviouralProgramMM:ConditionalBranch">
-      <Ifstatements xsi:type="behaviouralProgramMM:FunctionCall" FuncName="Console.WriteLine">
-        <arguments ExpressionString="&quot;n less than 10. n = {0}&quot;"/>
-        <arguments ExpressionString="n"/>
-      </Ifstatements>
-      <elsestatements xsi:type="behaviouralProgramMM:FunctionCall" FuncName="Console.WriteLine">
-        <arguments ExpressionString="&quot;n at least 10&quot;"/>
-      </elsestatements>
-      <ifexpression ExpressionString="n &lt; 10"/>
-    </functionBody>
-    <functionBody xsi:type="behaviouralProgramMM:FunctionCall" FuncName="Console.WriteLine">
-      <arguments ExpressionString="&quot;Foo is done!&quot;"/>
-    </functionBody>
-    <functionBody xsi:type="behaviouralProgramMM:TryCatch">
-      <catch xsi:type="behaviouralProgramMM:Assignment" VariableName="i">
-        <assignexpression ExpressionString="0"/>
-      </catch>
-      <catch xsi:type="behaviouralProgramMM:RaiseException">
-        <expression ExpressionString="new java.lang.Exception();"/>
-      </catch>
-      <try xsi:type="behaviouralProgramMM:Return">
-        <expression ExpressionString="i"/>
-      </try>
-    </functionBody>
-    <functionBody xsi:type="behaviouralProgramMM:Return">
-      <expression ExpressionString="i"/>
-    </functionBody>
-  </functions>
   <functions Name="Runner.Main">
-    <functionBody xsi:type="behaviouralProgramMM:Instantiation" VarName="i" VarType="int">
-      <InitiationExpression ExpressionString="42"/>
+    <functionBody xsi:type="behaviouralProgramMM:Assignment" VariableName="i">
+      <assignexpression xsi:type="behaviouralProgramMM:Literal" Value="1"/>
     </functionBody>
-    <functionBody xsi:type="behaviouralProgramMM:Instantiation" VarName="prog" VarType="Program">
-      <InitiationExpression ExpressionString="new Program()"/>
+    <functionBody xsi:type="behaviouralProgramMM:Assignment" VariableName="j">
+      <assignexpression xsi:type="behaviouralProgramMM:ReadLine"/>
     </functionBody>
-    <functionBody xsi:type="behaviouralProgramMM:Loop">
-      <loopstatements xsi:type="behaviouralProgramMM:FunctionCall" FuncName="prog.Foo">
-        <arguments ExpressionString="i"/>
-      </loopstatements>
-      <loopstatements xsi:type="behaviouralProgramMM:Assignment" VariableName="i">
-        <assignexpression ExpressionString="i - 1"/>
-      </loopstatements>
-      <loopexpression ExpressionString="i > 0"/>
+    <functionBody xsi:type="behaviouralProgramMM:Assignment" VariableName="k">
+      <assignexpression xsi:type="behaviouralProgramMM:Plus">
+        <leftSide xsi:type="behaviouralProgramMM:Variable" VarName="j"/>
+        <rightSide xsi:type="behaviouralProgramMM:Literal" Value="1"/>
+      </assignexpression>
+    </functionBody>
+    <functionBody xsi:type="behaviouralProgramMM:Assignment" VariableName="l">
+      <assignexpression xsi:type="behaviouralProgramMM:FunctionCall" FuncName="Runner.Main">
+        <arguments xsi:type="behaviouralProgramMM:Variable" VarName="k"/>
+      </assignexpression>
+    </functionBody>
+    <functionBody xsi:type="behaviouralProgramMM:WriteLineStatement">
+      <arguments xsi:type="behaviouralProgramMM:Variable" VarName="l"/>
+    </functionBody>
+    <functionBody xsi:type="behaviouralProgramMM:FunctionCallStatement" FuncName="Runner.Main"/>
+    <functionBody xsi:type="behaviouralProgramMM:ReadLineStatement"/>
+  </functions>
+  <functions Name="Runner.Foo">
+    <functionBody xsi:type="behaviouralProgramMM:TryCatch">
+      <catch xsi:type="behaviouralProgramMM:WriteLineStatement" FuncName="">
+        <arguments xsi:type="behaviouralProgramMM:Literal" Value="&quot;Error&quot;"/>
+      </catch>
+      <try xsi:type="behaviouralProgramMM:ConditionalBranch">
+        <Ifstatements xsi:type="behaviouralProgramMM:Return">
+          <expression xsi:type="behaviouralProgramMM:Variable" VarName="n"/>
+        </Ifstatements>
+        <ifexpression xsi:type="behaviouralProgramMM:Equals">
+          <leftSide xsi:type="behaviouralProgramMM:Variable" VarName="n"/>
+          <rightSide xsi:type="behaviouralProgramMM:Literal" Value="0"/>
+        </ifexpression>
+      </try>
+      <try xsi:type="behaviouralProgramMM:RaiseException">
+        <expression xsi:type="behaviouralProgramMM:Literal" Value="new java.lang.Exception()"/>
+      </try>
     </functionBody>
   </functions>
 </behaviouralProgramMM:Behaviour>

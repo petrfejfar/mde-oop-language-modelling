@@ -334,42 +334,6 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 	int FUNCTION_CALL = 6;
 
 	/**
-	 * The feature id for the '<em><b>Func Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_CALL__FUNC_NAME = STATEMENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_CALL__ARGUMENTS = STATEMENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Function Call</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_CALL_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Function Call</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_CALL_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link behaviouralProgramMM.impl.ExpressionImpl <em>Expression</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -380,22 +344,13 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 	int EXPRESSION = 7;
 
 	/**
-	 * The feature id for the '<em><b>Expression String</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPRESSION__EXPRESSION_STRING = 0;
-
-	/**
 	 * The number of structural features of the '<em>Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION_FEATURE_COUNT = 1;
+	int EXPRESSION_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Expression</em>' class.
@@ -405,6 +360,42 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 	 * @ordered
 	 */
 	int EXPRESSION_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Func Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CALL__FUNC_NAME = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CALL__ARGUMENTS = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Function Call</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CALL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Function Call</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CALL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 
 	/**
@@ -582,6 +573,477 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 	 * @ordered
 	 */
 	int RAISE_EXCEPTION_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link behaviouralProgramMM.impl.ReadLineImpl <em>Read Line</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see behaviouralProgramMM.impl.ReadLineImpl
+	 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getReadLine()
+	 * @generated
+	 */
+	int READ_LINE = 12;
+
+	/**
+	 * The number of structural features of the '<em>Read Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ_LINE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Read Line</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ_LINE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link behaviouralProgramMM.impl.BinaryOperatorImpl <em>Binary Operator</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see behaviouralProgramMM.impl.BinaryOperatorImpl
+	 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getBinaryOperator()
+	 * @generated
+	 */
+	int BINARY_OPERATOR = 22;
+
+	/**
+	 * The feature id for the '<em><b>Left Side</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINARY_OPERATOR__LEFT_SIDE = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Right Side</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINARY_OPERATOR__RIGHT_SIDE = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Binary Operator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINARY_OPERATOR_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Binary Operator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINARY_OPERATOR_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link behaviouralProgramMM.impl.ArithmeticInfixOperatorImpl <em>Arithmetic Infix Operator</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see behaviouralProgramMM.impl.ArithmeticInfixOperatorImpl
+	 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getArithmeticInfixOperator()
+	 * @generated
+	 */
+	int ARITHMETIC_INFIX_OPERATOR = 13;
+
+	/**
+	 * The feature id for the '<em><b>Left Side</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_INFIX_OPERATOR__LEFT_SIDE = BINARY_OPERATOR__LEFT_SIDE;
+
+	/**
+	 * The feature id for the '<em><b>Right Side</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_INFIX_OPERATOR__RIGHT_SIDE = BINARY_OPERATOR__RIGHT_SIDE;
+
+	/**
+	 * The number of structural features of the '<em>Arithmetic Infix Operator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_INFIX_OPERATOR_FEATURE_COUNT = BINARY_OPERATOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Arithmetic Infix Operator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_INFIX_OPERATOR_OPERATION_COUNT = BINARY_OPERATOR_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link behaviouralProgramMM.impl.PlusImpl <em>Plus</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see behaviouralProgramMM.impl.PlusImpl
+	 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getPlus()
+	 * @generated
+	 */
+	int PLUS = 14;
+
+	/**
+	 * The feature id for the '<em><b>Left Side</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLUS__LEFT_SIDE = ARITHMETIC_INFIX_OPERATOR__LEFT_SIDE;
+
+	/**
+	 * The feature id for the '<em><b>Right Side</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLUS__RIGHT_SIDE = ARITHMETIC_INFIX_OPERATOR__RIGHT_SIDE;
+
+	/**
+	 * The number of structural features of the '<em>Plus</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLUS_FEATURE_COUNT = ARITHMETIC_INFIX_OPERATOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Plus</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLUS_OPERATION_COUNT = ARITHMETIC_INFIX_OPERATOR_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link behaviouralProgramMM.impl.FunctionCallStatementImpl <em>Function Call Statement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see behaviouralProgramMM.impl.FunctionCallStatementImpl
+	 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getFunctionCallStatement()
+	 * @generated
+	 */
+	int FUNCTION_CALL_STATEMENT = 15;
+
+	/**
+	 * The feature id for the '<em><b>Func Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CALL_STATEMENT__FUNC_NAME = STATEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CALL_STATEMENT__ARGUMENTS = STATEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Function Call Statement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CALL_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Function Call Statement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_CALL_STATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link behaviouralProgramMM.impl.ReadLineStatementImpl <em>Read Line Statement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see behaviouralProgramMM.impl.ReadLineStatementImpl
+	 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getReadLineStatement()
+	 * @generated
+	 */
+	int READ_LINE_STATEMENT = 16;
+
+	/**
+	 * The feature id for the '<em><b>Func Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ_LINE_STATEMENT__FUNC_NAME = FUNCTION_CALL_STATEMENT__FUNC_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ_LINE_STATEMENT__ARGUMENTS = FUNCTION_CALL_STATEMENT__ARGUMENTS;
+
+	/**
+	 * The number of structural features of the '<em>Read Line Statement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ_LINE_STATEMENT_FEATURE_COUNT = FUNCTION_CALL_STATEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Read Line Statement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ_LINE_STATEMENT_OPERATION_COUNT = FUNCTION_CALL_STATEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link behaviouralProgramMM.impl.WriteLineStatementImpl <em>Write Line Statement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see behaviouralProgramMM.impl.WriteLineStatementImpl
+	 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getWriteLineStatement()
+	 * @generated
+	 */
+	int WRITE_LINE_STATEMENT = 17;
+
+	/**
+	 * The feature id for the '<em><b>Func Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRITE_LINE_STATEMENT__FUNC_NAME = FUNCTION_CALL_STATEMENT__FUNC_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Arguments</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRITE_LINE_STATEMENT__ARGUMENTS = FUNCTION_CALL_STATEMENT__ARGUMENTS;
+
+	/**
+	 * The number of structural features of the '<em>Write Line Statement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRITE_LINE_STATEMENT_FEATURE_COUNT = FUNCTION_CALL_STATEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Write Line Statement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WRITE_LINE_STATEMENT_OPERATION_COUNT = FUNCTION_CALL_STATEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link behaviouralProgramMM.impl.ComparsionOperatorImpl <em>Comparsion Operator</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see behaviouralProgramMM.impl.ComparsionOperatorImpl
+	 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getComparsionOperator()
+	 * @generated
+	 */
+	int COMPARSION_OPERATOR = 18;
+
+	/**
+	 * The feature id for the '<em><b>Left Side</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARSION_OPERATOR__LEFT_SIDE = BINARY_OPERATOR__LEFT_SIDE;
+
+	/**
+	 * The feature id for the '<em><b>Right Side</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARSION_OPERATOR__RIGHT_SIDE = BINARY_OPERATOR__RIGHT_SIDE;
+
+	/**
+	 * The number of structural features of the '<em>Comparsion Operator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARSION_OPERATOR_FEATURE_COUNT = BINARY_OPERATOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Comparsion Operator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARSION_OPERATOR_OPERATION_COUNT = BINARY_OPERATOR_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link behaviouralProgramMM.impl.EqualsImpl <em>Equals</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see behaviouralProgramMM.impl.EqualsImpl
+	 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getEquals()
+	 * @generated
+	 */
+	int EQUALS = 19;
+
+	/**
+	 * The feature id for the '<em><b>Left Side</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EQUALS__LEFT_SIDE = COMPARSION_OPERATOR__LEFT_SIDE;
+
+	/**
+	 * The feature id for the '<em><b>Right Side</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EQUALS__RIGHT_SIDE = COMPARSION_OPERATOR__RIGHT_SIDE;
+
+	/**
+	 * The number of structural features of the '<em>Equals</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EQUALS_FEATURE_COUNT = COMPARSION_OPERATOR_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Equals</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EQUALS_OPERATION_COUNT = COMPARSION_OPERATOR_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link behaviouralProgramMM.impl.VariableImpl <em>Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see behaviouralProgramMM.impl.VariableImpl
+	 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getVariable()
+	 * @generated
+	 */
+	int VARIABLE = 20;
+
+	/**
+	 * The feature id for the '<em><b>Var Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__VAR_NAME = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link behaviouralProgramMM.impl.LiteralImpl <em>Literal</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see behaviouralProgramMM.impl.LiteralImpl
+	 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getLiteral()
+	 * @generated
+	 */
+	int LITERAL = 21;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 
 	/**
@@ -808,17 +1270,6 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 	EClass getExpression();
 
 	/**
-	 * Returns the meta object for the attribute '{@link behaviouralProgramMM.Expression#getExpressionString <em>Expression String</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Expression String</em>'.
-	 * @see behaviouralProgramMM.Expression#getExpressionString()
-	 * @see #getExpression()
-	 * @generated
-	 */
-	EAttribute getExpression_ExpressionString();
-
-	/**
 	 * Returns the meta object for class '{@link behaviouralProgramMM.Instantiation <em>Instantiation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -934,6 +1385,182 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRaiseException_Expression();
+
+	/**
+	 * Returns the meta object for class '{@link behaviouralProgramMM.ReadLine <em>Read Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Read Line</em>'.
+	 * @see behaviouralProgramMM.ReadLine
+	 * @generated
+	 */
+	EClass getReadLine();
+
+	/**
+	 * Returns the meta object for class '{@link behaviouralProgramMM.ArithmeticInfixOperator <em>Arithmetic Infix Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Arithmetic Infix Operator</em>'.
+	 * @see behaviouralProgramMM.ArithmeticInfixOperator
+	 * @generated
+	 */
+	EClass getArithmeticInfixOperator();
+
+	/**
+	 * Returns the meta object for class '{@link behaviouralProgramMM.Plus <em>Plus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Plus</em>'.
+	 * @see behaviouralProgramMM.Plus
+	 * @generated
+	 */
+	EClass getPlus();
+
+	/**
+	 * Returns the meta object for class '{@link behaviouralProgramMM.FunctionCallStatement <em>Function Call Statement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Function Call Statement</em>'.
+	 * @see behaviouralProgramMM.FunctionCallStatement
+	 * @generated
+	 */
+	EClass getFunctionCallStatement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link behaviouralProgramMM.FunctionCallStatement#getFuncName <em>Func Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Func Name</em>'.
+	 * @see behaviouralProgramMM.FunctionCallStatement#getFuncName()
+	 * @see #getFunctionCallStatement()
+	 * @generated
+	 */
+	EAttribute getFunctionCallStatement_FuncName();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link behaviouralProgramMM.FunctionCallStatement#getArguments <em>Arguments</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Arguments</em>'.
+	 * @see behaviouralProgramMM.FunctionCallStatement#getArguments()
+	 * @see #getFunctionCallStatement()
+	 * @generated
+	 */
+	EReference getFunctionCallStatement_Arguments();
+
+	/**
+	 * Returns the meta object for class '{@link behaviouralProgramMM.ReadLineStatement <em>Read Line Statement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Read Line Statement</em>'.
+	 * @see behaviouralProgramMM.ReadLineStatement
+	 * @generated
+	 */
+	EClass getReadLineStatement();
+
+	/**
+	 * Returns the meta object for class '{@link behaviouralProgramMM.WriteLineStatement <em>Write Line Statement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Write Line Statement</em>'.
+	 * @see behaviouralProgramMM.WriteLineStatement
+	 * @generated
+	 */
+	EClass getWriteLineStatement();
+
+	/**
+	 * Returns the meta object for class '{@link behaviouralProgramMM.ComparsionOperator <em>Comparsion Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Comparsion Operator</em>'.
+	 * @see behaviouralProgramMM.ComparsionOperator
+	 * @generated
+	 */
+	EClass getComparsionOperator();
+
+	/**
+	 * Returns the meta object for class '{@link behaviouralProgramMM.Equals <em>Equals</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Equals</em>'.
+	 * @see behaviouralProgramMM.Equals
+	 * @generated
+	 */
+	EClass getEquals();
+
+	/**
+	 * Returns the meta object for class '{@link behaviouralProgramMM.Variable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Variable</em>'.
+	 * @see behaviouralProgramMM.Variable
+	 * @generated
+	 */
+	EClass getVariable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link behaviouralProgramMM.Variable#getVarName <em>Var Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Var Name</em>'.
+	 * @see behaviouralProgramMM.Variable#getVarName()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EAttribute getVariable_VarName();
+
+	/**
+	 * Returns the meta object for class '{@link behaviouralProgramMM.Literal <em>Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Literal</em>'.
+	 * @see behaviouralProgramMM.Literal
+	 * @generated
+	 */
+	EClass getLiteral();
+
+	/**
+	 * Returns the meta object for the attribute '{@link behaviouralProgramMM.Literal#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see behaviouralProgramMM.Literal#getValue()
+	 * @see #getLiteral()
+	 * @generated
+	 */
+	EAttribute getLiteral_Value();
+
+	/**
+	 * Returns the meta object for class '{@link behaviouralProgramMM.BinaryOperator <em>Binary Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Binary Operator</em>'.
+	 * @see behaviouralProgramMM.BinaryOperator
+	 * @generated
+	 */
+	EClass getBinaryOperator();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link behaviouralProgramMM.BinaryOperator#getLeftSide <em>Left Side</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Left Side</em>'.
+	 * @see behaviouralProgramMM.BinaryOperator#getLeftSide()
+	 * @see #getBinaryOperator()
+	 * @generated
+	 */
+	EReference getBinaryOperator_LeftSide();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link behaviouralProgramMM.BinaryOperator#getRightSide <em>Right Side</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Right Side</em>'.
+	 * @see behaviouralProgramMM.BinaryOperator#getRightSide()
+	 * @see #getBinaryOperator()
+	 * @generated
+	 */
+	EReference getBinaryOperator_RightSide();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1143,14 +1770,6 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 		EClass EXPRESSION = eINSTANCE.getExpression();
 
 		/**
-		 * The meta object literal for the '<em><b>Expression String</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXPRESSION__EXPRESSION_STRING = eINSTANCE.getExpression_ExpressionString();
-
-		/**
 		 * The meta object literal for the '{@link behaviouralProgramMM.impl.InstantiationImpl <em>Instantiation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1245,6 +1864,164 @@ public interface BehaviouralProgramMMPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RAISE_EXCEPTION__EXPRESSION = eINSTANCE.getRaiseException_Expression();
+
+		/**
+		 * The meta object literal for the '{@link behaviouralProgramMM.impl.ReadLineImpl <em>Read Line</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see behaviouralProgramMM.impl.ReadLineImpl
+		 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getReadLine()
+		 * @generated
+		 */
+		EClass READ_LINE = eINSTANCE.getReadLine();
+
+		/**
+		 * The meta object literal for the '{@link behaviouralProgramMM.impl.ArithmeticInfixOperatorImpl <em>Arithmetic Infix Operator</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see behaviouralProgramMM.impl.ArithmeticInfixOperatorImpl
+		 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getArithmeticInfixOperator()
+		 * @generated
+		 */
+		EClass ARITHMETIC_INFIX_OPERATOR = eINSTANCE.getArithmeticInfixOperator();
+
+		/**
+		 * The meta object literal for the '{@link behaviouralProgramMM.impl.PlusImpl <em>Plus</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see behaviouralProgramMM.impl.PlusImpl
+		 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getPlus()
+		 * @generated
+		 */
+		EClass PLUS = eINSTANCE.getPlus();
+
+		/**
+		 * The meta object literal for the '{@link behaviouralProgramMM.impl.FunctionCallStatementImpl <em>Function Call Statement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see behaviouralProgramMM.impl.FunctionCallStatementImpl
+		 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getFunctionCallStatement()
+		 * @generated
+		 */
+		EClass FUNCTION_CALL_STATEMENT = eINSTANCE.getFunctionCallStatement();
+
+		/**
+		 * The meta object literal for the '<em><b>Func Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FUNCTION_CALL_STATEMENT__FUNC_NAME = eINSTANCE.getFunctionCallStatement_FuncName();
+
+		/**
+		 * The meta object literal for the '<em><b>Arguments</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FUNCTION_CALL_STATEMENT__ARGUMENTS = eINSTANCE.getFunctionCallStatement_Arguments();
+
+		/**
+		 * The meta object literal for the '{@link behaviouralProgramMM.impl.ReadLineStatementImpl <em>Read Line Statement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see behaviouralProgramMM.impl.ReadLineStatementImpl
+		 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getReadLineStatement()
+		 * @generated
+		 */
+		EClass READ_LINE_STATEMENT = eINSTANCE.getReadLineStatement();
+
+		/**
+		 * The meta object literal for the '{@link behaviouralProgramMM.impl.WriteLineStatementImpl <em>Write Line Statement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see behaviouralProgramMM.impl.WriteLineStatementImpl
+		 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getWriteLineStatement()
+		 * @generated
+		 */
+		EClass WRITE_LINE_STATEMENT = eINSTANCE.getWriteLineStatement();
+
+		/**
+		 * The meta object literal for the '{@link behaviouralProgramMM.impl.ComparsionOperatorImpl <em>Comparsion Operator</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see behaviouralProgramMM.impl.ComparsionOperatorImpl
+		 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getComparsionOperator()
+		 * @generated
+		 */
+		EClass COMPARSION_OPERATOR = eINSTANCE.getComparsionOperator();
+
+		/**
+		 * The meta object literal for the '{@link behaviouralProgramMM.impl.EqualsImpl <em>Equals</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see behaviouralProgramMM.impl.EqualsImpl
+		 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getEquals()
+		 * @generated
+		 */
+		EClass EQUALS = eINSTANCE.getEquals();
+
+		/**
+		 * The meta object literal for the '{@link behaviouralProgramMM.impl.VariableImpl <em>Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see behaviouralProgramMM.impl.VariableImpl
+		 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getVariable()
+		 * @generated
+		 */
+		EClass VARIABLE = eINSTANCE.getVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Var Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE__VAR_NAME = eINSTANCE.getVariable_VarName();
+
+		/**
+		 * The meta object literal for the '{@link behaviouralProgramMM.impl.LiteralImpl <em>Literal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see behaviouralProgramMM.impl.LiteralImpl
+		 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getLiteral()
+		 * @generated
+		 */
+		EClass LITERAL = eINSTANCE.getLiteral();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LITERAL__VALUE = eINSTANCE.getLiteral_Value();
+
+		/**
+		 * The meta object literal for the '{@link behaviouralProgramMM.impl.BinaryOperatorImpl <em>Binary Operator</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see behaviouralProgramMM.impl.BinaryOperatorImpl
+		 * @see behaviouralProgramMM.impl.BehaviouralProgramMMPackageImpl#getBinaryOperator()
+		 * @generated
+		 */
+		EClass BINARY_OPERATOR = eINSTANCE.getBinaryOperator();
+
+		/**
+		 * The meta object literal for the '<em><b>Left Side</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BINARY_OPERATOR__LEFT_SIDE = eINSTANCE.getBinaryOperator_LeftSide();
+
+		/**
+		 * The meta object literal for the '<em><b>Right Side</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BINARY_OPERATOR__RIGHT_SIDE = eINSTANCE.getBinaryOperator_RightSide();
 
 	}
 

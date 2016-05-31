@@ -116,6 +116,50 @@ public class BehaviouralProgramMMAdapterFactory extends AdapterFactoryImpl {
 				return createRaiseExceptionAdapter();
 			}
 			@Override
+			public Adapter caseReadLine(ReadLine object) {
+				return createReadLineAdapter();
+			}
+			@Override
+			public Adapter caseArithmeticInfixOperator(ArithmeticInfixOperator object) {
+				return createArithmeticInfixOperatorAdapter();
+			}
+			@Override
+			public Adapter casePlus(Plus object) {
+				return createPlusAdapter();
+			}
+			@Override
+			public Adapter caseFunctionCallStatement(FunctionCallStatement object) {
+				return createFunctionCallStatementAdapter();
+			}
+			@Override
+			public Adapter caseReadLineStatement(ReadLineStatement object) {
+				return createReadLineStatementAdapter();
+			}
+			@Override
+			public Adapter caseWriteLineStatement(WriteLineStatement object) {
+				return createWriteLineStatementAdapter();
+			}
+			@Override
+			public Adapter caseComparsionOperator(ComparsionOperator object) {
+				return createComparsionOperatorAdapter();
+			}
+			@Override
+			public Adapter caseEquals(Equals object) {
+				return createEqualsAdapter();
+			}
+			@Override
+			public Adapter caseVariable(Variable object) {
+				return createVariableAdapter();
+			}
+			@Override
+			public Adapter caseLiteral(Literal object) {
+				return createLiteralAdapter();
+			}
+			@Override
+			public Adapter caseBinaryOperator(BinaryOperator object) {
+				return createBinaryOperatorAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -300,6 +344,160 @@ public class BehaviouralProgramMMAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRaiseExceptionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link behaviouralProgramMM.ReadLine <em>Read Line</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see behaviouralProgramMM.ReadLine
+	 * @generated
+	 */
+	public Adapter createReadLineAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link behaviouralProgramMM.ArithmeticInfixOperator <em>Arithmetic Infix Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see behaviouralProgramMM.ArithmeticInfixOperator
+	 * @generated
+	 */
+	public Adapter createArithmeticInfixOperatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link behaviouralProgramMM.Plus <em>Plus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see behaviouralProgramMM.Plus
+	 * @generated
+	 */
+	public Adapter createPlusAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link behaviouralProgramMM.FunctionCallStatement <em>Function Call Statement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see behaviouralProgramMM.FunctionCallStatement
+	 * @generated
+	 */
+	public Adapter createFunctionCallStatementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link behaviouralProgramMM.ReadLineStatement <em>Read Line Statement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see behaviouralProgramMM.ReadLineStatement
+	 * @generated
+	 */
+	public Adapter createReadLineStatementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link behaviouralProgramMM.WriteLineStatement <em>Write Line Statement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see behaviouralProgramMM.WriteLineStatement
+	 * @generated
+	 */
+	public Adapter createWriteLineStatementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link behaviouralProgramMM.ComparsionOperator <em>Comparsion Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see behaviouralProgramMM.ComparsionOperator
+	 * @generated
+	 */
+	public Adapter createComparsionOperatorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link behaviouralProgramMM.Equals <em>Equals</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see behaviouralProgramMM.Equals
+	 * @generated
+	 */
+	public Adapter createEqualsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link behaviouralProgramMM.Variable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see behaviouralProgramMM.Variable
+	 * @generated
+	 */
+	public Adapter createVariableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link behaviouralProgramMM.Literal <em>Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see behaviouralProgramMM.Literal
+	 * @generated
+	 */
+	public Adapter createLiteralAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link behaviouralProgramMM.BinaryOperator <em>Binary Operator</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see behaviouralProgramMM.BinaryOperator
+	 * @generated
+	 */
+	public Adapter createBinaryOperatorAdapter() {
 		return null;
 	}
 

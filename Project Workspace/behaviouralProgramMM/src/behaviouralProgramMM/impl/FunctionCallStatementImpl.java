@@ -4,7 +4,7 @@ package behaviouralProgramMM.impl;
 
 import behaviouralProgramMM.BehaviouralProgramMMPackage;
 import behaviouralProgramMM.Expression;
-import behaviouralProgramMM.FunctionCall;
+import behaviouralProgramMM.FunctionCallStatement;
 
 import java.util.Collection;
 
@@ -23,19 +23,19 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Function Call</b></em>'.
+ * An implementation of the model object '<em><b>Function Call Statement</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link behaviouralProgramMM.impl.FunctionCallImpl#getFuncName <em>Func Name</em>}</li>
- *   <li>{@link behaviouralProgramMM.impl.FunctionCallImpl#getArguments <em>Arguments</em>}</li>
+ *   <li>{@link behaviouralProgramMM.impl.FunctionCallStatementImpl#getFuncName <em>Func Name</em>}</li>
+ *   <li>{@link behaviouralProgramMM.impl.FunctionCallStatementImpl#getArguments <em>Arguments</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FunctionCallImpl extends ExpressionImpl implements FunctionCall {
+public class FunctionCallStatementImpl extends StatementImpl implements FunctionCallStatement {
 	/**
 	 * The default value of the '{@link #getFuncName() <em>Func Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -71,7 +71,7 @@ public class FunctionCallImpl extends ExpressionImpl implements FunctionCall {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected FunctionCallImpl() {
+	protected FunctionCallStatementImpl() {
 		super();
 	}
 
@@ -82,7 +82,7 @@ public class FunctionCallImpl extends ExpressionImpl implements FunctionCall {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BehaviouralProgramMMPackage.Literals.FUNCTION_CALL;
+		return BehaviouralProgramMMPackage.Literals.FUNCTION_CALL_STATEMENT;
 	}
 
 	/**
@@ -103,7 +103,7 @@ public class FunctionCallImpl extends ExpressionImpl implements FunctionCall {
 		String oldFuncName = funcName;
 		funcName = newFuncName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BehaviouralProgramMMPackage.FUNCTION_CALL__FUNC_NAME, oldFuncName, funcName));
+			eNotify(new ENotificationImpl(this, Notification.SET, BehaviouralProgramMMPackage.FUNCTION_CALL_STATEMENT__FUNC_NAME, oldFuncName, funcName));
 	}
 
 	/**
@@ -113,7 +113,7 @@ public class FunctionCallImpl extends ExpressionImpl implements FunctionCall {
 	 */
 	public EList<Expression> getArguments() {
 		if (arguments == null) {
-			arguments = new EObjectContainmentEList<Expression>(Expression.class, this, BehaviouralProgramMMPackage.FUNCTION_CALL__ARGUMENTS);
+			arguments = new EObjectContainmentEList<Expression>(Expression.class, this, BehaviouralProgramMMPackage.FUNCTION_CALL_STATEMENT__ARGUMENTS);
 		}
 		return arguments;
 	}
@@ -126,7 +126,7 @@ public class FunctionCallImpl extends ExpressionImpl implements FunctionCall {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case BehaviouralProgramMMPackage.FUNCTION_CALL__ARGUMENTS:
+			case BehaviouralProgramMMPackage.FUNCTION_CALL_STATEMENT__ARGUMENTS:
 				return ((InternalEList<?>)getArguments()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -140,9 +140,9 @@ public class FunctionCallImpl extends ExpressionImpl implements FunctionCall {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BehaviouralProgramMMPackage.FUNCTION_CALL__FUNC_NAME:
+			case BehaviouralProgramMMPackage.FUNCTION_CALL_STATEMENT__FUNC_NAME:
 				return getFuncName();
-			case BehaviouralProgramMMPackage.FUNCTION_CALL__ARGUMENTS:
+			case BehaviouralProgramMMPackage.FUNCTION_CALL_STATEMENT__ARGUMENTS:
 				return getArguments();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -157,10 +157,10 @@ public class FunctionCallImpl extends ExpressionImpl implements FunctionCall {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BehaviouralProgramMMPackage.FUNCTION_CALL__FUNC_NAME:
+			case BehaviouralProgramMMPackage.FUNCTION_CALL_STATEMENT__FUNC_NAME:
 				setFuncName((String)newValue);
 				return;
-			case BehaviouralProgramMMPackage.FUNCTION_CALL__ARGUMENTS:
+			case BehaviouralProgramMMPackage.FUNCTION_CALL_STATEMENT__ARGUMENTS:
 				getArguments().clear();
 				getArguments().addAll((Collection<? extends Expression>)newValue);
 				return;
@@ -176,10 +176,10 @@ public class FunctionCallImpl extends ExpressionImpl implements FunctionCall {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BehaviouralProgramMMPackage.FUNCTION_CALL__FUNC_NAME:
+			case BehaviouralProgramMMPackage.FUNCTION_CALL_STATEMENT__FUNC_NAME:
 				setFuncName(FUNC_NAME_EDEFAULT);
 				return;
-			case BehaviouralProgramMMPackage.FUNCTION_CALL__ARGUMENTS:
+			case BehaviouralProgramMMPackage.FUNCTION_CALL_STATEMENT__ARGUMENTS:
 				getArguments().clear();
 				return;
 		}
@@ -194,9 +194,9 @@ public class FunctionCallImpl extends ExpressionImpl implements FunctionCall {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BehaviouralProgramMMPackage.FUNCTION_CALL__FUNC_NAME:
+			case BehaviouralProgramMMPackage.FUNCTION_CALL_STATEMENT__FUNC_NAME:
 				return FUNC_NAME_EDEFAULT == null ? funcName != null : !FUNC_NAME_EDEFAULT.equals(funcName);
-			case BehaviouralProgramMMPackage.FUNCTION_CALL__ARGUMENTS:
+			case BehaviouralProgramMMPackage.FUNCTION_CALL_STATEMENT__ARGUMENTS:
 				return arguments != null && !arguments.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -218,4 +218,4 @@ public class FunctionCallImpl extends ExpressionImpl implements FunctionCall {
 		return result.toString();
 	}
 
-} //FunctionCallImpl
+} //FunctionCallStatementImpl

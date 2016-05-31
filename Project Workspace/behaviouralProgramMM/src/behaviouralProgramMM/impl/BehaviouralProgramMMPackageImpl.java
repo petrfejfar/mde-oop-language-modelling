@@ -2,21 +2,32 @@
  */
 package behaviouralProgramMM.impl;
 
+import behaviouralProgramMM.ArithmeticInfixOperator;
 import behaviouralProgramMM.Assignment;
 import behaviouralProgramMM.Behaviour;
 import behaviouralProgramMM.BehaviouralProgramMMFactory;
 import behaviouralProgramMM.BehaviouralProgramMMPackage;
+import behaviouralProgramMM.BinaryOperator;
+import behaviouralProgramMM.ComparsionOperator;
 import behaviouralProgramMM.ConditionalBranch;
+import behaviouralProgramMM.Equals;
 import behaviouralProgramMM.Expression;
 import behaviouralProgramMM.Function;
 import behaviouralProgramMM.FunctionCall;
+import behaviouralProgramMM.FunctionCallStatement;
 import behaviouralProgramMM.Instantiation;
+import behaviouralProgramMM.Literal;
 import behaviouralProgramMM.Loop;
+import behaviouralProgramMM.Plus;
 import behaviouralProgramMM.RaiseException;
+import behaviouralProgramMM.ReadLine;
+import behaviouralProgramMM.ReadLineStatement;
 import behaviouralProgramMM.Return;
 import behaviouralProgramMM.Statement;
 
 import behaviouralProgramMM.TryCatch;
+import behaviouralProgramMM.Variable;
+import behaviouralProgramMM.WriteLineStatement;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -114,6 +125,83 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 	 * @generated
 	 */
 	private EClass raiseExceptionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass readLineEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass arithmeticInfixOperatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass plusEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass functionCallStatementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass readLineStatementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass writeLineStatementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass comparsionOperatorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass equalsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass variableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass literalEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass binaryOperatorEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -370,15 +458,6 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExpression_ExpressionString() {
-		return (EAttribute)expressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getInstantiation() {
 		return instantiationEClass;
 	}
@@ -478,6 +557,159 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getReadLine() {
+		return readLineEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArithmeticInfixOperator() {
+		return arithmeticInfixOperatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPlus() {
+		return plusEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFunctionCallStatement() {
+		return functionCallStatementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFunctionCallStatement_FuncName() {
+		return (EAttribute)functionCallStatementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFunctionCallStatement_Arguments() {
+		return (EReference)functionCallStatementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getReadLineStatement() {
+		return readLineStatementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getWriteLineStatement() {
+		return writeLineStatementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getComparsionOperator() {
+		return comparsionOperatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEquals() {
+		return equalsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVariable() {
+		return variableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVariable_VarName() {
+		return (EAttribute)variableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getLiteral() {
+		return literalEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLiteral_Value() {
+		return (EAttribute)literalEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBinaryOperator() {
+		return binaryOperatorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBinaryOperator_LeftSide() {
+		return (EReference)binaryOperatorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBinaryOperator_RightSide() {
+		return (EReference)binaryOperatorEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public BehaviouralProgramMMFactory getBehaviouralProgramMMFactory() {
 		return (BehaviouralProgramMMFactory)getEFactoryInstance();
 	}
@@ -529,7 +761,6 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 		createEReference(functionCallEClass, FUNCTION_CALL__ARGUMENTS);
 
 		expressionEClass = createEClass(EXPRESSION);
-		createEAttribute(expressionEClass, EXPRESSION__EXPRESSION_STRING);
 
 		instantiationEClass = createEClass(INSTANTIATION);
 		createEAttribute(instantiationEClass, INSTANTIATION__VAR_NAME);
@@ -545,6 +776,34 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 
 		raiseExceptionEClass = createEClass(RAISE_EXCEPTION);
 		createEReference(raiseExceptionEClass, RAISE_EXCEPTION__EXPRESSION);
+
+		readLineEClass = createEClass(READ_LINE);
+
+		arithmeticInfixOperatorEClass = createEClass(ARITHMETIC_INFIX_OPERATOR);
+
+		plusEClass = createEClass(PLUS);
+
+		functionCallStatementEClass = createEClass(FUNCTION_CALL_STATEMENT);
+		createEAttribute(functionCallStatementEClass, FUNCTION_CALL_STATEMENT__FUNC_NAME);
+		createEReference(functionCallStatementEClass, FUNCTION_CALL_STATEMENT__ARGUMENTS);
+
+		readLineStatementEClass = createEClass(READ_LINE_STATEMENT);
+
+		writeLineStatementEClass = createEClass(WRITE_LINE_STATEMENT);
+
+		comparsionOperatorEClass = createEClass(COMPARSION_OPERATOR);
+
+		equalsEClass = createEClass(EQUALS);
+
+		variableEClass = createEClass(VARIABLE);
+		createEAttribute(variableEClass, VARIABLE__VAR_NAME);
+
+		literalEClass = createEClass(LITERAL);
+		createEAttribute(literalEClass, LITERAL__VALUE);
+
+		binaryOperatorEClass = createEClass(BINARY_OPERATOR);
+		createEReference(binaryOperatorEClass, BINARY_OPERATOR__LEFT_SIDE);
+		createEReference(binaryOperatorEClass, BINARY_OPERATOR__RIGHT_SIDE);
 	}
 
 	/**
@@ -578,11 +837,22 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 		assignmentEClass.getESuperTypes().add(this.getStatement());
 		conditionalBranchEClass.getESuperTypes().add(this.getStatement());
 		loopEClass.getESuperTypes().add(this.getStatement());
-		functionCallEClass.getESuperTypes().add(this.getStatement());
+		functionCallEClass.getESuperTypes().add(this.getExpression());
 		instantiationEClass.getESuperTypes().add(this.getStatement());
 		returnEClass.getESuperTypes().add(this.getStatement());
 		tryCatchEClass.getESuperTypes().add(this.getStatement());
 		raiseExceptionEClass.getESuperTypes().add(this.getStatement());
+		readLineEClass.getESuperTypes().add(this.getExpression());
+		arithmeticInfixOperatorEClass.getESuperTypes().add(this.getBinaryOperator());
+		plusEClass.getESuperTypes().add(this.getArithmeticInfixOperator());
+		functionCallStatementEClass.getESuperTypes().add(this.getStatement());
+		readLineStatementEClass.getESuperTypes().add(this.getFunctionCallStatement());
+		writeLineStatementEClass.getESuperTypes().add(this.getFunctionCallStatement());
+		comparsionOperatorEClass.getESuperTypes().add(this.getBinaryOperator());
+		equalsEClass.getESuperTypes().add(this.getComparsionOperator());
+		variableEClass.getESuperTypes().add(this.getExpression());
+		literalEClass.getESuperTypes().add(this.getExpression());
+		binaryOperatorEClass.getESuperTypes().add(this.getExpression());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(behaviourEClass, Behaviour.class, "Behaviour", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -612,8 +882,7 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 		initEAttribute(getFunctionCall_FuncName(), ecorePackage.getEString(), "FuncName", null, 0, 1, FunctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionCall_Arguments(), this.getExpression(), null, "arguments", null, 0, -1, FunctionCall.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getExpression_ExpressionString(), ecorePackage.getEString(), "ExpressionString", null, 0, 1, Expression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(instantiationEClass, Instantiation.class, "Instantiation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInstantiation_VarName(), ecorePackage.getEString(), "VarName", null, 0, 1, Instantiation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -629,6 +898,34 @@ public class BehaviouralProgramMMPackageImpl extends EPackageImpl implements Beh
 
 		initEClass(raiseExceptionEClass, RaiseException.class, "RaiseException", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRaiseException_Expression(), this.getExpression(), null, "expression", null, 1, 1, RaiseException.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(readLineEClass, ReadLine.class, "ReadLine", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(arithmeticInfixOperatorEClass, ArithmeticInfixOperator.class, "ArithmeticInfixOperator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(plusEClass, Plus.class, "Plus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(functionCallStatementEClass, FunctionCallStatement.class, "FunctionCallStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFunctionCallStatement_FuncName(), ecorePackage.getEString(), "FuncName", null, 0, 1, FunctionCallStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionCallStatement_Arguments(), this.getExpression(), null, "arguments", null, 0, -1, FunctionCallStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(readLineStatementEClass, ReadLineStatement.class, "ReadLineStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(writeLineStatementEClass, WriteLineStatement.class, "WriteLineStatement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(comparsionOperatorEClass, ComparsionOperator.class, "ComparsionOperator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(equalsEClass, Equals.class, "Equals", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVariable_VarName(), ecorePackage.getEString(), "VarName", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLiteral_Value(), ecorePackage.getEString(), "Value", null, 0, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(binaryOperatorEClass, BinaryOperator.class, "BinaryOperator", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBinaryOperator_LeftSide(), this.getExpression(), null, "leftSide", null, 1, 1, BinaryOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBinaryOperator_RightSide(), this.getExpression(), null, "rightSide", null, 1, 1, BinaryOperator.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
