@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import structuralProgramMM.AccessMod;
 import structuralProgramMM.DataTypes;
 import structuralProgramMM.StructuralProgramMMPackage;
 import structuralProgramMM.Variable;
@@ -23,6 +24,7 @@ import structuralProgramMM.Variable;
  * <ul>
  *   <li>{@link structuralProgramMM.impl.VariableImpl#getName <em>Name</em>}</li>
  *   <li>{@link structuralProgramMM.impl.VariableImpl#getType <em>Type</em>}</li>
+ *   <li>{@link structuralProgramMM.impl.VariableImpl#getAccesSpecifier <em>Acces Specifier</em>}</li>
  * </ul>
  *
  * @generated
@@ -67,6 +69,26 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	 * @ordered
 	 */
 	protected DataTypes type = TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAccesSpecifier() <em>Acces Specifier</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAccesSpecifier()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final AccessMod ACCES_SPECIFIER_EDEFAULT = AccessMod.PUBLIC;
+
+	/**
+	 * The cached value of the '{@link #getAccesSpecifier() <em>Acces Specifier</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAccesSpecifier()
+	 * @generated
+	 * @ordered
+	 */
+	protected AccessMod accesSpecifier = ACCES_SPECIFIER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,6 +156,27 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public AccessMod getAccesSpecifier() {
+		return accesSpecifier;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAccesSpecifier(AccessMod newAccesSpecifier) {
+		AccessMod oldAccesSpecifier = accesSpecifier;
+		accesSpecifier = newAccesSpecifier == null ? ACCES_SPECIFIER_EDEFAULT : newAccesSpecifier;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StructuralProgramMMPackage.VARIABLE__ACCES_SPECIFIER, oldAccesSpecifier, accesSpecifier));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -141,6 +184,8 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 				return getName();
 			case StructuralProgramMMPackage.VARIABLE__TYPE:
 				return getType();
+			case StructuralProgramMMPackage.VARIABLE__ACCES_SPECIFIER:
+				return getAccesSpecifier();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,6 +203,9 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 				return;
 			case StructuralProgramMMPackage.VARIABLE__TYPE:
 				setType((DataTypes)newValue);
+				return;
+			case StructuralProgramMMPackage.VARIABLE__ACCES_SPECIFIER:
+				setAccesSpecifier((AccessMod)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,6 +225,9 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 			case StructuralProgramMMPackage.VARIABLE__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
+			case StructuralProgramMMPackage.VARIABLE__ACCES_SPECIFIER:
+				setAccesSpecifier(ACCES_SPECIFIER_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -193,6 +244,8 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case StructuralProgramMMPackage.VARIABLE__TYPE:
 				return type != TYPE_EDEFAULT;
+			case StructuralProgramMMPackage.VARIABLE__ACCES_SPECIFIER:
+				return accesSpecifier != ACCES_SPECIFIER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -211,6 +264,8 @@ public class VariableImpl extends MinimalEObjectImpl.Container implements Variab
 		result.append(name);
 		result.append(", Type: ");
 		result.append(type);
+		result.append(", AccesSpecifier: ");
+		result.append(accesSpecifier);
 		result.append(')');
 		return result.toString();
 	}

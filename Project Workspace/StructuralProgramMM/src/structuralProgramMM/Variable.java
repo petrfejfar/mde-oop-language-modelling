@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link structuralProgramMM.Variable#getName <em>Name</em>}</li>
  *   <li>{@link structuralProgramMM.Variable#getType <em>Type</em>}</li>
+ *   <li>{@link structuralProgramMM.Variable#getAccesSpecifier <em>Acces Specifier</em>}</li>
  * </ul>
  *
  * @see structuralProgramMM.StructuralProgramMMPackage#getVariable()
@@ -76,5 +77,35 @@ public interface Variable extends EObject {
 	 * @generated
 	 */
 	void setType(DataTypes value);
+
+	/**
+	 * Returns the value of the '<em><b>Acces Specifier</b></em>' attribute.
+	 * The default value is <code>"public"</code>.
+	 * The literals are from the enumeration {@link structuralProgramMM.AccessMod}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Acces Specifier</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Acces Specifier</em>' attribute.
+	 * @see structuralProgramMM.AccessMod
+	 * @see #setAccesSpecifier(AccessMod)
+	 * @see structuralProgramMM.StructuralProgramMMPackage#getVariable_AccesSpecifier()
+	 * @model default="public" required="true"
+	 * @generated
+	 */
+	AccessMod getAccesSpecifier();
+
+	/**
+	 * Sets the value of the '{@link structuralProgramMM.Variable#getAccesSpecifier <em>Acces Specifier</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Acces Specifier</em>' attribute.
+	 * @see structuralProgramMM.AccessMod
+	 * @see #getAccesSpecifier()
+	 * @generated
+	 */
+	void setAccesSpecifier(AccessMod value);
 
 } // Variable

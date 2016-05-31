@@ -187,13 +187,22 @@ public interface StructuralProgramMMPackage extends EPackage {
 	int VARIABLE__TYPE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Acces Specifier</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE__ACCES_SPECIFIER = 2;
+
+	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_COUNT = 2;
+	int VARIABLE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Variable</em>' class.
@@ -406,6 +415,17 @@ public interface StructuralProgramMMPackage extends EPackage {
 	EAttribute getVariable_Type();
 
 	/**
+	 * Returns the meta object for the attribute '{@link structuralProgramMM.Variable#getAccesSpecifier <em>Acces Specifier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Acces Specifier</em>'.
+	 * @see structuralProgramMM.Variable#getAccesSpecifier()
+	 * @see #getVariable()
+	 * @generated
+	 */
+	EAttribute getVariable_AccesSpecifier();
+
+	/**
 	 * Returns the meta object for class '{@link structuralProgramMM.Method <em>Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -598,6 +618,14 @@ public interface StructuralProgramMMPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VARIABLE__TYPE = eINSTANCE.getVariable_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Acces Specifier</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VARIABLE__ACCES_SPECIFIER = eINSTANCE.getVariable_AccesSpecifier();
 
 		/**
 		 * The meta object literal for the '{@link structuralProgramMM.impl.MethodImpl <em>Method</em>}' class.

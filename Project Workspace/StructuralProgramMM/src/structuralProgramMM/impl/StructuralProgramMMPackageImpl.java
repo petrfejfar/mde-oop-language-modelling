@@ -223,6 +223,15 @@ public class StructuralProgramMMPackageImpl extends EPackageImpl implements Stru
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getVariable_AccesSpecifier() {
+		return (EAttribute)variableEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMethod() {
 		return methodEClass;
 	}
@@ -330,6 +339,7 @@ public class StructuralProgramMMPackageImpl extends EPackageImpl implements Stru
 		variableEClass = createEClass(VARIABLE);
 		createEAttribute(variableEClass, VARIABLE__NAME);
 		createEAttribute(variableEClass, VARIABLE__TYPE);
+		createEAttribute(variableEClass, VARIABLE__ACCES_SPECIFIER);
 
 		methodEClass = createEClass(METHOD);
 		createEAttribute(methodEClass, METHOD__NAME);
@@ -385,6 +395,7 @@ public class StructuralProgramMMPackageImpl extends EPackageImpl implements Stru
 		initEClass(variableEClass, Variable.class, "Variable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVariable_Type(), this.getDataTypes(), "Type", null, 0, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVariable_AccesSpecifier(), this.getAccessMod(), "AccesSpecifier", "public", 1, 1, Variable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(methodEClass, Method.class, "Method", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMethod_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Method.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
