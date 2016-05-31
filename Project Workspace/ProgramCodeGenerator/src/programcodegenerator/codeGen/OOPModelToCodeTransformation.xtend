@@ -192,10 +192,12 @@ public class OOPModelToCodeTransformation extends OOPModelToCodeTransformationSu
 	}
 	«ENDIF»
 	'''
+	
 	def String genCode(Return ret)
 	'''
 	return «ret.expression.genCode»;
 	'''
+	
 	def String genCode(TryCatch trycatch)
 	'''
 	try {
@@ -209,9 +211,10 @@ public class OOPModelToCodeTransformation extends OOPModelToCodeTransformationSu
 	    «ENDFOR»
 	}
 	'''
+	
 	def String genCode(RaiseException raise)
 	'''
-	throw «raise.expression.genCode»;
+	throw new java.lang.Exception(«raise.expression.genCode»);
 	'''
 	
 	def String genCode(Instantiation instantiation)

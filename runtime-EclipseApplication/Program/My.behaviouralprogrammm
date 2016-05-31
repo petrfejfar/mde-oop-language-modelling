@@ -39,7 +39,7 @@
         </ifexpression>
       </try>
       <try xsi:type="behaviouralProgramMM:RaiseException">
-        <expression xsi:type="behaviouralProgramMM:Literal" Value="new java.lang.Exception()"/>
+        <expression xsi:type="behaviouralProgramMM:Literal" Value="&quot;message&quot;"/>
       </try>
     </functionBody>
   </functions>
