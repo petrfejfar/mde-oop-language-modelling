@@ -6,6 +6,6 @@ Group assigment for Model-driven engineering course at MDH Sweden, 2016. Design 
 
 To run the code generation:
 1. Run the "CodeGenRunner" plugin project as a new Eclipse Application
-2. In the file explorer, select the behaviour and structure metamodel instance files (and only those two files!).
-3. Press the "Generate Code" command on the Eclipse main menu bar.
-4. Code should show up in the Eclipse instance you ran the plugin from.
+2. Press the "Generate Code" command on the Eclipse main menu bar.
+3. Choose the behaviour and structure model instance files as well as the output directory and target language.
+4. Press Finish. Code should show up in the output directory. File name is the name of the class containing the main method.
