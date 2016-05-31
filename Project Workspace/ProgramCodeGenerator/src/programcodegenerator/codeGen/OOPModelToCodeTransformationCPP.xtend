@@ -14,13 +14,11 @@ import behaviouralProgramMM.ConditionalBranch
 import behaviouralProgramMM.Loop
 import behaviouralProgramMM.Instantiation
 
-public class OOPModelToCodeTransformationCPP {
-	Behaviour behaviour
-	Program program
-	def String genCode(Program prog, Behaviour behav)
+public class OOPModelToCodeTransformationCPP extends OOPModelToCodeTransformationSuperClass {
+	
+	override String genCode(Program prog, Behaviour behav)
 	{
-		program = prog
-		behaviour = behav
+		fileEnding = ".cpp"
 	'''
 	«FOR c : prog.classes»
 		«c.genCode»

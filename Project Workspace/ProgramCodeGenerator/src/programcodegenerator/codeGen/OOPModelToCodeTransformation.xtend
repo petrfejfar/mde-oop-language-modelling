@@ -17,13 +17,11 @@ import behaviouralProgramMM.Return
 import behaviouralProgramMM.TryCatch
 import behaviouralProgramMM.RaiseException
 
-public class OOPModelToCodeTransformation {
-	Behaviour behaviour
-	Program program
-	def String genCode(Program prog, Behaviour behav)
+public class OOPModelToCodeTransformation extends OOPModelToCodeTransformationSuperClass {
+	
+	override String genCode(Program prog, Behaviour behav)
 	{
-		program = prog
-		behaviour = behav
+		fileEnding = ".java"
 	'''
 	«FOR c : prog.classes»
 		«c.genCode»

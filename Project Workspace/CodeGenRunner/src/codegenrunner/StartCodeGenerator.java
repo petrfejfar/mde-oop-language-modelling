@@ -22,25 +22,32 @@ import behaviouralProgramMM.Behaviour;
 import behaviouralProgramMM.BehaviouralProgramMMPackage;
 import programcodegenerator.codeGen.OOPModelToCodeTransformation;
 import programcodegenerator.codeGen.OOPModelToCodeTransformationCPP;
+import programcodegenerator.codeGen.OOPModelToCodeTransformationSuperClass;
 import structuralProgramMM.Program;
 import structuralProgramMM.StructuralProgramMMFactory;
 
 public class StartCodeGenerator {
-	public static String GenerateCode(String behaviourPath, String strucuturalPath, String OutputDir)
+	public static String GenerateCode(String behaviourPath, String strucuturalPath, String OutputDir, OOPModelToCodeTransformationSuperClass TransformRunner)
 	{
 		IPath behavpath = new Path(behaviourPath);
 		Behaviour behav = LoadBehaviour(behavpath);
 		
 		IPath structpath = new Path(strucuturalPath);
 		Program prog = LoadProgram(structpath);
-		
-		OOPModelToCodeTransformation m2code = new OOPModelToCodeTransformation();
 		String s = null;
+		
+		/* Set the transformation runner to default if not specified */
+		if(TransformRunner == null)
+		{
+			TransformRunner = new OOPModelToCodeTransformation();
+		}
+		/* Check if transformation is ready to run */
 		if (behav != null && prog != null)
-			s = m2code.genCode(prog, behav);
-
+			s = TransformRunner.runCodeGeneration(prog, behav);
+		
+		/* Print transformation result to file */
 		if (s != null) {
-			java.nio.file.Path path = java.nio.file.Paths.get(OutputDir, prog.getMainMethod().getClass_().getName().concat(".java"));
+			java.nio.file.Path path = java.nio.file.Paths.get(OutputDir, prog.getMainMethod().getClass_().getName().concat(TransformRunner.getFileEnding()));
 			try {
 				WriteToFile(s, path);
 			} catch (IOException e) {
@@ -49,7 +56,7 @@ public class StartCodeGenerator {
 			System.out.println(s);
 		}
 		
-		OOPModelToCodeTransformationCPP m2codeCPP = new OOPModelToCodeTransformationCPP();
+		/*OOPModelToCodeTransformationCPP m2codeCPP = new OOPModelToCodeTransformationCPP();
 		String t = null;
 		if (behav != null && prog != null)
 			t = m2codeCPP.genCode(prog, behav);
@@ -64,7 +71,8 @@ public class StartCodeGenerator {
 			System.out.println(t);
 		}
 		
-		return s + t;
+		return s + t;*/
+		return s;
 	}
 
 	static void WriteToFile(String text, java.nio.file.Path filePath) throws IOException

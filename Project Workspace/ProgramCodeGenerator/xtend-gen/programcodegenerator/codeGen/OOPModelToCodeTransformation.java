@@ -15,6 +15,7 @@ import behaviouralProgramMM.TryCatch;
 import com.google.common.base.Objects;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.xtend2.lib.StringConcatenation;
+import programcodegenerator.codeGen.OOPModelToCodeTransformationSuperClass;
 import structuralProgramMM.AccessMod;
 import structuralProgramMM.DataTypes;
 import structuralProgramMM.Method;
@@ -22,16 +23,12 @@ import structuralProgramMM.Program;
 import structuralProgramMM.Variable;
 
 @SuppressWarnings("all")
-public class OOPModelToCodeTransformation {
-  private Behaviour behaviour;
-  
-  private Program program;
-  
+public class OOPModelToCodeTransformation extends OOPModelToCodeTransformationSuperClass {
+  @Override
   public String genCode(final Program prog, final Behaviour behav) {
     String _xblockexpression = null;
     {
-      this.program = prog;
-      this.behaviour = behav;
+      this.fileEnding = ".java";
       StringConcatenation _builder = new StringConcatenation();
       {
         EList<structuralProgramMM.Class> _classes = prog.getClasses();
@@ -307,27 +304,8 @@ public class OOPModelToCodeTransformation {
   }
   
   public String genCode(final Loop loop) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("while (");
-    Expression _loopexpression = loop.getLoopexpression();
-    String _expressionString = _loopexpression.getExpressionString();
-    _builder.append(_expressionString, "");
-    _builder.append(")");
-    _builder.newLineIfNotEmpty();
-    _builder.append("{");
-    _builder.newLine();
-    {
-      EList<Statement> _loopstatements = loop.getLoopstatements();
-      for(final Statement s : _loopstatements) {
-        _builder.append("    ");
-        String _genCode = this.genCode(s);
-        _builder.append(_genCode, "    ");
-        _builder.newLineIfNotEmpty();
-      }
-    }
-    _builder.append("}");
-    _builder.newLine();
-    return _builder.toString();
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field expressionString is undefined for the type Expression");
   }
   
   public String genCode(final FunctionCall funcCall) {
@@ -343,71 +321,18 @@ public class OOPModelToCodeTransformation {
   }
   
   public String genCode(final Assignment assign) {
-    StringConcatenation _builder = new StringConcatenation();
-    String _variableName = assign.getVariableName();
-    _builder.append(_variableName, "");
-    _builder.append(" = ");
-    Expression _assignexpression = assign.getAssignexpression();
-    String _expressionString = _assignexpression.getExpressionString();
-    _builder.append(_expressionString, "");
-    return _builder.toString();
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field expressionString is undefined for the type Expression");
   }
   
   public String genCode(final ConditionalBranch branch) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("if(");
-    Expression _ifexpression = branch.getIfexpression();
-    String _expressionString = _ifexpression.getExpressionString();
-    _builder.append(_expressionString, "");
-    _builder.append(")");
-    _builder.newLineIfNotEmpty();
-    _builder.append("{");
-    _builder.newLine();
-    {
-      EList<Statement> _ifstatements = branch.getIfstatements();
-      for(final Statement s : _ifstatements) {
-        _builder.append("    ");
-        String _genCode = this.genCode(s);
-        _builder.append(_genCode, "    ");
-        _builder.newLineIfNotEmpty();
-      }
-    }
-    _builder.append("}");
-    _builder.newLine();
-    {
-      EList<Statement> _elsestatements = branch.getElsestatements();
-      int _size = _elsestatements.size();
-      boolean _greaterThan = (_size > 0);
-      if (_greaterThan) {
-        _builder.append("else");
-        _builder.newLine();
-        _builder.append("{");
-        _builder.newLine();
-        {
-          EList<Statement> _elsestatements_1 = branch.getElsestatements();
-          for(final Statement s_1 : _elsestatements_1) {
-            _builder.append("    ");
-            String _genCode_1 = this.genCode(s_1);
-            _builder.append(_genCode_1, "    ");
-            _builder.newLineIfNotEmpty();
-          }
-        }
-        _builder.append("}");
-        _builder.newLine();
-      }
-    }
-    return _builder.toString();
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field expressionString is undefined for the type Expression");
   }
   
   public String genCode(final Return ret) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("return ");
-    Expression _expression = ret.getExpression();
-    String _expressionString = _expression.getExpressionString();
-    _builder.append(_expressionString, "");
-    _builder.append(";");
-    _builder.newLineIfNotEmpty();
-    return _builder.toString();
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field expressionString is undefined for the type Expression");
   }
   
   public String genCode(final TryCatch trycatch) {
@@ -442,65 +367,19 @@ public class OOPModelToCodeTransformation {
   }
   
   public String genCode(final RaiseException raise) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("throw ");
-    Expression _expression = raise.getExpression();
-    String _expressionString = _expression.getExpressionString();
-    _builder.append(_expressionString, "");
-    _builder.newLineIfNotEmpty();
-    return _builder.toString();
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field expressionString is undefined for the type Expression");
   }
   
   public String genCode(final Instantiation instantiation) {
-    String _xblockexpression = null;
-    {
-      StringConcatenation _builder = new StringConcatenation();
-      String _varType = instantiation.getVarType();
-      _builder.append(_varType, "");
-      _builder.append(" ");
-      String _varName = instantiation.getVarName();
-      _builder.append(_varName, "");
-      String s = _builder.toString();
-      Expression _initiationExpression = instantiation.getInitiationExpression();
-      boolean _notEquals = (!Objects.equal(_initiationExpression, null));
-      if (_notEquals) {
-        String _s = s;
-        StringConcatenation _builder_1 = new StringConcatenation();
-        _builder_1.append(" ");
-        _builder_1.append("= ");
-        Expression _initiationExpression_1 = instantiation.getInitiationExpression();
-        String _expressionString = _initiationExpression_1.getExpressionString();
-        _builder_1.append(_expressionString, " ");
-        s = (_s + _builder_1);
-      }
-      _xblockexpression = s;
-    }
-    return _xblockexpression;
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field expressionString is undefined for the type Expression");
   }
   
   public String getArgList(final EList<Expression> exprs) {
-    String _xblockexpression = null;
-    {
-      String s = "";
-      for (int i = 0; (i < (exprs.size() - 1)); i++) {
-        String _s = s;
-        Expression _get = exprs.get(i);
-        String _expressionString = _get.getExpressionString();
-        String _plus = (_expressionString + ", ");
-        s = (_s + _plus);
-      }
-      int _size = exprs.size();
-      boolean _greaterThan = (_size > 0);
-      if (_greaterThan) {
-        String _s = s;
-        int _size_1 = exprs.size();
-        int _minus = (_size_1 - 1);
-        Expression _get = exprs.get(_minus);
-        String _expressionString = _get.getExpressionString();
-        s = (_s + _expressionString);
-      }
-      _xblockexpression = s;
-    }
-    return _xblockexpression;
+    throw new Error("Unresolved compilation problems:"
+      + "\nThe method or field expressionString is undefined for the type Expression"
+      + "\nThe method or field expressionString is undefined for the type Expression"
+      + "\n+ cannot be resolved");
   }
 }
