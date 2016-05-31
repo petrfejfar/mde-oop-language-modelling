@@ -118,37 +118,24 @@ public class OOPModelToCodeTransformation extends OOPModelToCodeTransformationSu
 	def String genCode(Statement stmt)
 	'''	
 	«IF stmt instanceof Loop»
-	«(stmt as Loop).genCode»
-	«ELSEIF stmt instanceof FunctionCallStatement»
-	«(stmt as FunctionCallStatement).genCode»;
-	«ELSEIF stmt instanceof Assignment»
-	«(stmt as Assignment).genCode»;
-	«ELSEIF stmt instanceof Instantiation»
-	«(stmt as Instantiation).genCode»;
-	«ELSEIF stmt instanceof ConditionalBranch»
-	«(stmt as ConditionalBranch).genCode»
-	«ELSEIF stmt instanceof Return»
-	«(stmt as Return).genCode»
-	«ELSEIF stmt instanceof TryCatch»
-	«(stmt as TryCatch).genCode»
-	«ELSEIF stmt instanceof RaiseException»
-	«(stmt as RaiseException).genCode»
-	«ENDIF»
+	«(stmt as Loop).genCode»«ELSEIF stmt instanceof FunctionCallStatement»
+	«(stmt as FunctionCallStatement).genCode»;«ELSEIF stmt instanceof Assignment»
+	«(stmt as Assignment).genCode»;«ELSEIF stmt instanceof Instantiation»
+	«(stmt as Instantiation).genCode»;«ELSEIF stmt instanceof ConditionalBranch»
+	«(stmt as ConditionalBranch).genCode»«ELSEIF stmt instanceof Return»
+	«(stmt as Return).genCode»«ELSEIF stmt instanceof TryCatch»
+	«(stmt as TryCatch).genCode»«ELSEIF stmt instanceof RaiseException»
+	«(stmt as RaiseException).genCode»«ENDIF»
 	'''
 	
 	def String genCode(Expression stmt)
 	'''	
 	«IF stmt instanceof Literal»
-	«(stmt as Literal).genCode»
-	«ELSEIF stmt instanceof behaviouralProgramMM.Variable»
-	«(stmt as behaviouralProgramMM.Variable).genCode»
-	«ELSEIF stmt instanceof ReadLine»
-	«(stmt as ReadLine).genCode»
-	«ELSEIF stmt instanceof FunctionCall»
-	«(stmt as FunctionCall).genCode»
-	«ELSEIF stmt instanceof BinaryOperator»
-	«(stmt as BinaryOperator).genCode»
-	«ENDIF»'''
+	«(stmt as Literal).genCode»«ELSEIF stmt instanceof behaviouralProgramMM.Variable»
+	«(stmt as behaviouralProgramMM.Variable).genCode»«ELSEIF stmt instanceof ReadLine»
+	«(stmt as ReadLine).genCode»«ELSEIF stmt instanceof FunctionCall»
+	«(stmt as FunctionCall).genCode»«ELSEIF stmt instanceof BinaryOperator»
+	«(stmt as BinaryOperator).genCode»«ENDIF»'''
 	
 	def String genCode(Literal lit)
 	'''«lit.value»'''
@@ -165,10 +152,8 @@ public class OOPModelToCodeTransformation extends OOPModelToCodeTransformationSu
 	def String genCode(BinaryOperator binop)
 	'''
 	«IF binop instanceof Plus»
-	(«binop.leftSide.genCode»+«binop.rightSide.genCode»)
-	«ELSEIF binop instanceof Equals»
-	(«binop.leftSide.genCode»==«binop.rightSide.genCode»)
-	«ENDIF»'''
+	(«binop.leftSide.genCode»+«binop.rightSide.genCode»)«ELSEIF binop instanceof Equals»
+	(«binop.leftSide.genCode»==«binop.rightSide.genCode»)«ENDIF»'''
 	
 	
 	def String genCode(Loop loop)
@@ -183,13 +168,9 @@ public class OOPModelToCodeTransformation extends OOPModelToCodeTransformationSu
 	def String genCode(FunctionCallStatement funcCall)
 	'''
 	«IF funcCall instanceof WriteLineStatement»
-	java.lang.System.out.println(«funcCall.arguments.argList»)
-	«ELSEIF funcCall instanceof ReadLineStatement»
-	new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.System.in)).readLine()
-	«ELSE»
-	«funcCall.funcName»(«funcCall.arguments.argList»)
-	«ENDIF»
-	'''
+	java.lang.System.out.println(«funcCall.arguments.argList»)«ELSEIF funcCall instanceof ReadLineStatement»
+	new java.io.BufferedReader(new java.io.InputStreamReader(java.lang.System.in)).readLine()«ELSE»
+	«funcCall.funcName»(«funcCall.arguments.argList»)«ENDIF»'''
 	
 	def String genCode(Assignment assign)
 	'''«assign.variableName» = «assign.assignexpression.genCode»'''
